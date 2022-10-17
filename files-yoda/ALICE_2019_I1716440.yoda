@@ -1,0 +1,421 @@
+BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2019_I1716440/d01-x01-y01
+ErrorBreakdown: {0: {stat: {dn: -19.8, up: 19.8}, sys: {dn: -7.57, up: 7.58}, 'sys,uncertainty on branching ratio': {dn: -0.792, up: 0.792}, 'sys,uncertainty on integrated luminomisty': {dn: -1.6632000000000002, up: 1.6632000000000002}}, 1: {stat: {dn: -19.5, up: 19.5}, sys: {dn: -10.2, up: 10.3}, 'sys,uncertainty on branching ratio': {dn: -1.49, up: 1.49}, 'sys,uncertainty on integrated luminomisty': {dn: -3.129, up: 3.129}}, 2: {stat: {dn: -24.5, up: 24.5}, sys: {dn: -18.7, up: 19.1}, 'sys,uncertainty on branching ratio': {dn: -1.86, up: 1.86}, 'sys,uncertainty on integrated luminomisty': {dn: -3.9060000000000006, up: 3.9060000000000006}}, 3: {stat: {dn: -10.7, up: 10.7}, sys: {dn: -11.3, up: 11.7}, 'sys,uncertainty on branching ratio': {dn: -1.44, up: 1.44}, 'sys,uncertainty on integrated luminomisty': {dn: -3.024, up: 3.024}}, 4: {stat: {dn: -5.78, up: 5.78}, sys: {dn: -8.19, up: 8.53}, 'sys,uncertainty on branching ratio': {dn: -1.03, up: 1.03}, 'sys,uncertainty on integrated luminomisty': {dn: -2.1630000000000003, up: 2.1630000000000003}}, 5: {stat: {dn: -3.16, up: 3.16}, sys: {dn: -5.63, up: 5.96}, 'sys,uncertainty on branching ratio': {dn: -0.695, up: 0.695}, 'sys,uncertainty on integrated luminomisty': {dn: -1.4595, up: 1.4595}}, 6: {stat: {dn: -2.09, up: 2.09}, sys: {dn: -3.47, up: 3.73}, 'sys,uncertainty on branching ratio': {dn: -0.523, up: 0.523}, 'sys,uncertainty on integrated luminomisty': {dn: -1.0983, up: 1.0983}}, 7: {stat: {dn: -1.34, up: 1.34}, sys: {dn: -2.25, up: 2.48}, 'sys,uncertainty on branching ratio': {dn: -0.331, up: 0.331}, 'sys,uncertainty on integrated luminomisty': {dn: -0.6951, up: 0.6951}}, 8: {stat: {dn: -0.946, up: 0.946}, sys: {dn: -1.49, up: 1.67}, 'sys,uncertainty on branching ratio': {dn: -0.21899999999999997, up: 0.21899999999999997}, 'sys,uncertainty on integrated luminomisty': {dn: -0.4599, up: 0.4599}}, 9: {stat: {dn: -0.673, up: 0.673}, sys: {dn: -1.01, up: 1.17}, 'sys,uncertainty on branching ratio': {dn: -0.14800000000000002, up: 0.14800000000000002}, 'sys,uncertainty on integrated luminomisty': {dn: -0.3108000000000001, up: 0.3108000000000001}}, 10: {stat: {dn: -0.521, up: 0.521}, sys: {dn: -0.741, up: 0.857}, 'sys,uncertainty on branching ratio': {dn: -0.10800000000000001, up: 0.10800000000000001}, 'sys,uncertainty on integrated luminomisty': {dn: -0.22680000000000003, up: 0.22680000000000003}}, 11: {stat: {dn: -0.406, up: 0.406}, sys: {dn: -0.558, up: 0.643}, 'sys,uncertainty on branching ratio': {dn: -0.0823, up: 0.0823}, 'sys,uncertainty on integrated luminomisty': {dn: -0.17283, up: 0.17283}}, 12: {stat: {dn: -0.312, up: 0.312}, sys: {dn: -0.385, up: 0.45}, 'sys,uncertainty on branching ratio': {dn: -0.051500000000000004, up: 0.051500000000000004}, 'sys,uncertainty on integrated luminomisty': {dn: -0.10815000000000001, up: 0.10815000000000001}}, 13: {stat: {dn: -0.268, up: 0.268}, sys: {dn: -0.296, up: 0.343}, 'sys,uncertainty on branching ratio': {dn: -0.0401, up: 0.0401}, 'sys,uncertainty on integrated luminomisty': {dn: -0.08421, up: 0.08421}}, 14: {stat: {dn: -0.213, up: 0.213}, sys: {dn: -0.214, up: 0.251}, 'sys,uncertainty on branching ratio': {dn: -0.028399999999999998, up: 0.028399999999999998}, 'sys,uncertainty on integrated luminomisty': {dn: -0.05964, up: 0.05964}}, 15: {stat: {dn: -0.179, up: 0.179}, sys: {dn: -0.163, up: 0.189}, 'sys,uncertainty on branching ratio': {dn: -0.0218, up: 0.0218}, 'sys,uncertainty on integrated luminomisty': {dn: -0.04578, up: 0.04578}}, 16: {stat: {dn: -0.0935, up: 0.0935}, sys: {dn: -0.103, up: 0.12}, 'sys,uncertainty on branching ratio': {dn: -0.013600000000000001, up: 0.013600000000000001}, 'sys,uncertainty on integrated luminomisty': {dn: -0.028560000000000002, up: 0.028560000000000002}}, 17: {stat: {dn: -0.0714, up: 0.0714}, sys: {dn: -0.0671, up: 0.0759}, 'sys,uncertainty on branching ratio': {dn: -0.00924, up: 0.00924}, 'sys,uncertainty on integrated luminomisty': {dn: -0.019404, up: 0.019404}}, 18: {stat: {dn: -0.0366, up: 0.0366}, sys: {dn: -0.0358, up: 0.0401}, 'sys,uncertainty on branching ratio': {dn: -0.0049499999999999995, up: 0.0049499999999999995}, 'sys,uncertainty on integrated luminomisty': {dn: -0.010395, up: 0.010395}}, 19: {stat: {dn: -0.0144, up: 0.0144}, sys: {dn: -0.013, up: 0.0139}, 'sys,uncertainty on branching ratio': {dn: -0.00153, up: 0.00153}, 'sys,uncertainty on integrated luminomisty': {dn: -0.0032129999999999997, up: 0.0032129999999999997}}, 20: {stat: {dn: -0.0043, up: 0.0043}, sys: {dn: -0.00297, up: 0.00309}, 'sys,uncertainty on branching ratio': {dn: -0.000357, up: 0.000357}, 'sys,uncertainty on integrated luminomisty': {dn: -0.0007497000000000001, up: 0.0007497000000000001}}, 21: {stat: {dn: -0.00106, up: 0.00106}, sys: {dn: -0.000368, up: 0.000375}, 'sys,uncertainty on branching ratio': {dn: -4.5199999999999994e-05, up: 4.5199999999999994e-05}, 'sys,uncertainty on integrated luminomisty': {dn: -9.491999999999999e-05, up: 9.491999999999999e-05}}}
+IsRef: 1
+Path: /REF/ALICE_2019_I1716440/d01-x01-y01
+Title: doi:10.17182/hepdata.89326.v1/t1
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+2.500000e-01	2.500000e-01	2.500000e-01	7.920000e+01	2.127765e+01	2.128121e+01
+7.500000e-01	2.500000e-01	2.500000e-01	1.490000e+02	2.227781e+01	2.232377e+01
+1.250000e+00	2.500000e-01	2.500000e-01	1.860000e+02	3.112325e+01	3.136521e+01
+1.750000e+00	2.500000e-01	2.500000e-01	1.440000e+02	1.591849e+01	1.620488e+01
+2.250000e+00	2.500000e-01	2.500000e-01	1.030000e+02	1.030650e+01	1.057869e+01
+2.750000e+00	2.500000e-01	2.500000e-01	6.950000e+01	6.655499e+00	6.936884e+00
+3.250000e+00	2.500000e-01	2.500000e-01	5.230000e+01	4.229514e+00	4.445311e+00
+3.750000e+00	2.500000e-01	2.500000e-01	3.310000e+01	2.729620e+00	2.922110e+00
+4.250000e+00	2.500000e-01	2.500000e-01	2.190000e+01	1.836977e+00	1.985771e+00
+4.750000e+00	2.500000e-01	2.500000e-01	1.480000e+01	1.261558e+00	1.392957e+00
+5.250000e+00	2.500000e-01	2.500000e-01	1.080000e+01	9.400129e-01	1.033921e+00
+5.750000e+00	2.500000e-01	2.500000e-01	8.230000e+00	7.161309e-01	7.841738e-01
+6.250000e+00	2.500000e-01	2.500000e-01	5.150000e+00	5.098212e-01	5.605289e-01
+6.750000e+00	2.500000e-01	2.500000e-01	4.010000e+00	4.100480e-01	4.451655e-01
+7.250000e+00	2.500000e-01	2.500000e-01	2.840000e+00	3.090768e-01	3.357581e-01
+7.750000e+00	2.500000e-01	2.500000e-01	2.180000e+00	2.473480e-01	2.652038e-01
+8.500000e+00	5.000000e-01	5.000000e-01	1.360000e+00	1.426600e-01	1.553798e-01
+9.500000e+00	5.000000e-01	5.000000e-01	9.240000e-01	1.003108e-01	1.063986e-01
+1.100000e+01	1.000000e+00	1.000000e+00	4.950000e-01	5.247627e-02	5.549891e-02
+1.400000e+01	2.000000e+00	2.000000e+00	1.530000e-01	1.972370e-02	2.032816e-02
+2.000000e+01	4.000000e+00	4.000000e+00	3.570000e-02	5.291540e-03	5.359813e-03
+3.000000e+01	6.000000e+00	6.000000e+00	4.520000e-03	1.126977e-03	1.129282e-03
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2019_I1716440/d02-x01-y01
+ErrorBreakdown: {0: {stat: {dn: -18.9, up: 18.9}, sys: {dn: -7.86, up: 7.92}, 'sys,uncertainty on branching ratio': {dn: -2.6815, up: 2.6815}, 'sys,uncertainty on integrated luminomisty': {dn: -1.8165, up: 1.8165}}, 1: {stat: {dn: -5.99, up: 5.99}, sys: {dn: -4.64, up: 4.72}, 'sys,uncertainty on branching ratio': {dn: -1.7360000000000002, up: 1.7360000000000002}, 'sys,uncertainty on integrated luminomisty': {dn: -1.1760000000000002, up: 1.1760000000000002}}, 2: {stat: {dn: -3.11, up: 3.11}, sys: {dn: -2.93, up: 2.99}, 'sys,uncertainty on branching ratio': {dn: -1.2586000000000002, up: 1.2586000000000002}, 'sys,uncertainty on integrated luminomisty': {dn: -0.8526000000000001, up: 0.8526000000000001}}, 3: {stat: {dn: -1.49, up: 1.49}, sys: {dn: -2.18, up: 2.23}, 'sys,uncertainty on branching ratio': {dn: -0.9517, up: 0.9517}, 'sys,uncertainty on integrated luminomisty': {dn: -0.6447, up: 0.6447}}, 4: {stat: {dn: -0.867, up: 0.867}, sys: {dn: -1.5, up: 1.55}, 'sys,uncertainty on branching ratio': {dn: -0.7099, up: 0.7099}, 'sys,uncertainty on integrated luminomisty': {dn: -0.4809, up: 0.4809}}, 5: {stat: {dn: -0.528, up: 0.528}, sys: {dn: -0.957, up: 0.995}, 'sys,uncertainty on branching ratio': {dn: -0.4557, up: 0.4557}, 'sys,uncertainty on integrated luminomisty': {dn: -0.3087, up: 0.3087}}, 6: {stat: {dn: -0.358, up: 0.358}, sys: {dn: -0.74, up: 0.767}, 'sys,uncertainty on branching ratio': {dn: -0.3131, up: 0.3131}, 'sys,uncertainty on integrated luminomisty': {dn: -0.21209999999999998, up: 0.21209999999999998}}, 7: {stat: {dn: -0.262, up: 0.262}, sys: {dn: -0.523, up: 0.543}, 'sys,uncertainty on branching ratio': {dn: -0.22289000000000003, up: 0.22289000000000003}, 'sys,uncertainty on integrated luminomisty': {dn: -0.15099, up: 0.15099}}, 8: {stat: {dn: -0.186, up: 0.186}, sys: {dn: -0.368, up: 0.38}, 'sys,uncertainty on branching ratio': {dn: -0.15748, up: 0.15748}, 'sys,uncertainty on integrated luminomisty': {dn: -0.10668, up: 0.10668}}, 9: {stat: {dn: -0.142, up: 0.142}, sys: {dn: -0.258, up: 0.268}, 'sys,uncertainty on branching ratio': {dn: -0.11005, up: 0.11005}, 'sys,uncertainty on integrated luminomisty': {dn: -0.07454999999999999, up: 0.07454999999999999}}, 10: {stat: {dn: -0.111, up: 0.111}, sys: {dn: -0.189, up: 0.196}, 'sys,uncertainty on branching ratio': {dn: -0.07595, up: 0.07595}, 'sys,uncertainty on integrated luminomisty': {dn: -0.05145, up: 0.05145}}, 11: {stat: {dn: -0.0956, up: 0.0956}, sys: {dn: -0.146, up: 0.151}, 'sys,uncertainty on branching ratio': {dn: -0.0589, up: 0.0589}, 'sys,uncertainty on integrated luminomisty': {dn: -0.0399, up: 0.0399}}, 12: {stat: {dn: -0.075, up: 0.075}, sys: {dn: -0.113, up: 0.116}, 'sys,uncertainty on branching ratio': {dn: -0.04557, up: 0.04557}, 'sys,uncertainty on integrated luminomisty': {dn: -0.03087, up: 0.03087}}, 13: {stat: {dn: -0.0603, up: 0.0603}, sys: {dn: -0.0729, up: 0.0759}, 'sys,uncertainty on branching ratio': {dn: -0.029139999999999996, up: 0.029139999999999996}, 'sys,uncertainty on integrated luminomisty': {dn: -0.019739999999999997, up: 0.019739999999999997}}, 14: {stat: {dn: -0.0315, up: 0.0315}, sys: {dn: -0.0489, up: 0.0509}, 'sys,uncertainty on branching ratio': {dn: -0.019530000000000002, up: 0.019530000000000002}, 'sys,uncertainty on integrated luminomisty': {dn: -0.01323, up: 0.01323}}, 15: {stat: {dn: -0.026, up: 0.026}, sys: {dn: -0.0351, up: 0.0361}, 'sys,uncertainty on branching ratio': {dn: -0.013547, up: 0.013547}, 'sys,uncertainty on integrated luminomisty': {dn: -0.009177, up: 0.009177}}, 16: {stat: {dn: -0.0119, up: 0.0119}, sys: {dn: -0.0164, up: 0.0168}, 'sys,uncertainty on branching ratio': {dn: -0.0059830000000000005, up: 0.0059830000000000005}, 'sys,uncertainty on integrated luminomisty': {dn: -0.004053, up: 0.004053}}, 17: {stat: {dn: -0.00463, up: 0.00463}, sys: {dn: -0.00662, up: 0.00673}, 'sys,uncertainty on branching ratio': {dn: -0.0024427999999999997, up: 0.0024427999999999997}, 'sys,uncertainty on integrated luminomisty': {dn: -0.0016547999999999999, up: 0.0016547999999999999}}, 18: {stat: {dn: -0.00121, up: 0.00121}, sys: {dn: -0.000954, up: 0.000969}, 'sys,uncertainty on branching ratio': {dn: -0.0003317, up: 0.0003317}, 'sys,uncertainty on integrated luminomisty': {dn: -0.00022470000000000001, up: 0.00022470000000000001}}, 19: {stat: {dn: -0.000354, up: 0.000354}, sys: {dn: -0.000215, up: 0.000215}, 'sys,uncertainty on branching ratio': {dn: -6.355e-05, up: 6.355e-05}, 'sys,uncertainty on integrated luminomisty': {dn: -4.305e-05, up: 4.305e-05}}}
+IsRef: 1
+Path: /REF/ALICE_2019_I1716440/d02-x01-y01
+Title: doi:10.17182/hepdata.89326.v1/t2
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.250000e+00	2.500000e-01	2.500000e-01	8.650000e+01	2.072389e+01	2.074672e+01
+1.750000e+00	2.500000e-01	2.500000e-01	5.600000e+01	7.861703e+00	7.909183e+00
+2.250000e+00	2.500000e-01	2.500000e-01	4.060000e+01	4.535196e+00	4.574189e+00
+2.750000e+00	2.500000e-01	2.500000e-01	3.070000e+01	2.879908e+00	2.917940e+00
+3.250000e+00	2.500000e-01	2.500000e-01	2.290000e+01	1.933109e+00	1.972159e+00
+3.750000e+00	2.500000e-01	2.500000e-01	1.470000e+01	1.223761e+00	1.253701e+00
+4.250000e+00	2.500000e-01	2.500000e-01	1.010000e+01	9.048657e-01	9.270766e-01
+4.750000e+00	2.500000e-01	2.500000e-01	7.190000e+00	6.439340e-01	6.602809e-01
+5.250000e+00	2.500000e-01	2.500000e-01	5.080000e+00	4.540931e-01	4.638713e-01
+5.750000e+00	2.500000e-01	2.500000e-01	3.550000e+00	3.231048e-01	3.311445e-01
+6.250000e+00	2.500000e-01	2.500000e-01	2.450000e+00	2.376079e-01	2.432129e-01
+6.750000e+00	2.500000e-01	2.500000e-01	1.900000e+00	1.884584e-01	1.923579e-01
+7.250000e+00	2.500000e-01	2.500000e-01	1.470000e+00	1.463680e-01	1.486963e-01
+7.750000e+00	2.500000e-01	2.500000e-01	9.400000e-01	1.009421e-01	1.031296e-01
+8.500000e+00	5.000000e-01	5.000000e-01	6.300000e-01	6.276873e-02	6.433905e-02
+9.500000e+00	5.000000e-01	5.000000e-01	4.370000e-01	4.664492e-02	4.740199e-02
+1.100000e+01	1.000000e+00	1.000000e+00	1.930000e-01	2.151263e-02	2.181910e-02
+1.400000e+01	2.000000e+00	2.000000e+00	7.880000e-02	8.600403e-03	8.685357e-03
+2.000000e+01	4.000000e+00	4.000000e+00	1.070000e-02	1.592084e-03	1.601117e-03
+3.000000e+01	6.000000e+00	6.000000e+00	2.050000e-03	4.212279e-04	4.212279e-04
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2019_I1716440/d03-x01-y01
+ErrorBreakdown: {0: {stat: {dn: -11.7, up: 11.7}, sys: {dn: -6.99, up: 7.11}, 'sys,uncertainty on branching ratio': {dn: -0.7995, up: 0.7995}, 'sys,uncertainty on integrated luminomisty': {dn: -1.2915, up: 1.2915}}, 1: {stat: {dn: -5.32, up: 5.32}, sys: {dn: -3.65, up: 3.75}, 'sys,uncertainty on branching ratio': {dn: -0.6123000000000001, up: 0.6123000000000001}, 'sys,uncertainty on integrated luminomisty': {dn: -0.9891000000000001, up: 0.9891000000000001}}, 2: {stat: {dn: -3.02, up: 3.02}, sys: {dn: -2.32, up: 2.43}, 'sys,uncertainty on branching ratio': {dn: -0.4589, up: 0.4589}, 'sys,uncertainty on integrated luminomisty': {dn: -0.7413, up: 0.7413}}, 3: {stat: {dn: -1.65, up: 1.65}, sys: {dn: -1.49, up: 1.56}, 'sys,uncertainty on branching ratio': {dn: -0.3016, up: 0.3016}, 'sys,uncertainty on integrated luminomisty': {dn: -0.48719999999999997, up: 0.48719999999999997}}, 4: {stat: {dn: -1.1, up: 1.1}, sys: {dn: -0.982, up: 1.06}, 'sys,uncertainty on branching ratio': {dn: -0.22230000000000003, up: 0.22230000000000003}, 'sys,uncertainty on integrated luminomisty': {dn: -0.35910000000000003, up: 0.35910000000000003}}, 5: {stat: {dn: -0.626, up: 0.626}, sys: {dn: -0.662, up: 0.689}, 'sys,uncertainty on branching ratio': {dn: -0.1573, up: 0.1573}, 'sys,uncertainty on integrated luminomisty': {dn: -0.2541, up: 0.2541}}, 6: {stat: {dn: -0.434, up: 0.434}, sys: {dn: -0.428, up: 0.452}, 'sys,uncertainty on branching ratio': {dn: -0.10088000000000001, up: 0.10088000000000001}, 'sys,uncertainty on integrated luminomisty': {dn: -0.16296000000000002, up: 0.16296000000000002}}, 7: {stat: {dn: -0.275, up: 0.275}, sys: {dn: -0.271, up: 0.281}, 'sys,uncertainty on branching ratio': {dn: -0.06539, up: 0.06539}, 'sys,uncertainty on integrated luminomisty': {dn: -0.10563000000000002, up: 0.10563000000000002}}, 8: {stat: {dn: -0.218, up: 0.218}, sys: {dn: -0.218, up: 0.225}, 'sys,uncertainty on branching ratio': {dn: -0.05291, up: 0.05291}, 'sys,uncertainty on integrated luminomisty': {dn: -0.08547, up: 0.08547}}, 9: {stat: {dn: -0.167, up: 0.167}, sys: {dn: -0.158, up: 0.162}, 'sys,uncertainty on branching ratio': {dn: -0.03822, up: 0.03822}, 'sys,uncertainty on integrated luminomisty': {dn: -0.06174, up: 0.06174}}, 10: {stat: {dn: -0.123, up: 0.123}, sys: {dn: -0.107, up: 0.111}, 'sys,uncertainty on branching ratio': {dn: -0.02587, up: 0.02587}, 'sys,uncertainty on integrated luminomisty': {dn: -0.04179, up: 0.04179}}, 11: {stat: {dn: -0.0979, up: 0.0979}, sys: {dn: -0.0753, up: 0.0783}, 'sys,uncertainty on branching ratio': {dn: -0.01807, up: 0.01807}, 'sys,uncertainty on integrated luminomisty': {dn: -0.02919, up: 0.02919}}, 12: {stat: {dn: -0.0857, up: 0.0857}, sys: {dn: -0.0674, up: 0.0695}, 'sys,uncertainty on branching ratio': {dn: -0.016380000000000002, up: 0.016380000000000002}, 'sys,uncertainty on integrated luminomisty': {dn: -0.02646, up: 0.02646}}, 13: {stat: {dn: -0.0498, up: 0.0498}, sys: {dn: -0.0435, up: 0.0452}, 'sys,uncertainty on branching ratio': {dn: -0.010413, up: 0.010413}, 'sys,uncertainty on integrated luminomisty': {dn: -0.016821, up: 0.016821}}, 14: {stat: {dn: -0.0383, up: 0.0383}, sys: {dn: -0.0282, up: 0.0292}, 'sys,uncertainty on branching ratio': {dn: -0.0067599999999999995, up: 0.0067599999999999995}, 'sys,uncertainty on integrated luminomisty': {dn: -0.01092, up: 0.01092}}, 15: {stat: {dn: -0.0181, up: 0.0181}, sys: {dn: -0.0129, up: 0.0135}, 'sys,uncertainty on branching ratio': {dn: -0.0030549999999999996, up: 0.0030549999999999996}, 'sys,uncertainty on integrated luminomisty': {dn: -0.004934999999999999, up: 0.004934999999999999}}, 16: {stat: {dn: -0.00732, up: 0.00732}, sys: {dn: -0.00513, up: 0.0053}, 'sys,uncertainty on branching ratio': {dn: -0.0012181, up: 0.0012181}, 'sys,uncertainty on integrated luminomisty': {dn: -0.0019677, up: 0.0019677}}, 17: {stat: {dn: -0.0023, up: 0.0023}, sys: {dn: -0.000975, up: 0.001}, 'sys,uncertainty on branching ratio': {dn: -0.0002171, up: 0.0002171}, 'sys,uncertainty on integrated luminomisty': {dn: -0.0003507, up: 0.0003507}}, 18: {stat: {dn: -0.000715, up: 0.000715}, sys: {dn: -0.000204, up: 0.000205}, 'sys,uncertainty on branching ratio': {dn: -4.758e-05, up: 4.758e-05}, 'sys,uncertainty on integrated luminomisty': {dn: -7.686e-05, up: 7.686e-05}}}
+IsRef: 1
+Path: /REF/ALICE_2019_I1716440/d03-x01-y01
+Title: doi:10.17182/hepdata.89326.v1/t3
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.500000e+00	5.000000e-01	5.000000e-01	6.150000e+01	1.371340e+01	1.377495e+01
+2.250000e+00	2.500000e-01	2.500000e-01	4.710000e+01	6.555771e+00	6.611969e+00
+2.750000e+00	2.500000e-01	2.500000e-01	3.530000e+01	3.906778e+00	3.973086e+00
+3.250000e+00	2.500000e-01	2.500000e-01	2.320000e+01	2.295850e+00	2.341885e+00
+3.750000e+00	2.500000e-01	2.500000e-01	1.710000e+01	1.533849e+00	1.584920e+00
+4.250000e+00	2.500000e-01	2.500000e-01	1.210000e+01	9.588692e-01	9.777050e-01
+4.750000e+00	2.500000e-01	2.500000e-01	7.760000e+00	6.389622e-01	6.552807e-01
+5.250000e+00	2.500000e-01	2.500000e-01	5.030000e+00	4.055854e-01	4.123343e-01
+5.750000e+00	2.500000e-01	2.500000e-01	4.070000e+00	3.242724e-01	3.290191e-01
+6.250000e+00	2.500000e-01	2.500000e-01	2.940000e+00	2.410925e-01	2.437326e-01
+6.750000e+00	2.500000e-01	2.500000e-01	1.990000e+00	1.702753e-01	1.728168e-01
+7.250000e+00	2.500000e-01	2.500000e-01	1.390000e+00	1.281916e-01	1.299765e-01
+7.750000e+00	2.500000e-01	2.500000e-01	1.260000e+00	1.133829e-01	1.146437e-01
+8.500000e+00	5.000000e-01	5.000000e-01	8.010000e-01	6.901932e-02	7.010319e-02
+9.500000e+00	5.000000e-01	5.000000e-01	5.200000e-01	4.926534e-02	4.984450e-02
+1.100000e+01	1.000000e+00	1.000000e+00	2.350000e-01	2.297188e-02	2.331410e-02
+1.400000e+01	2.000000e+00	2.000000e+00	9.370000e-02	9.233359e-03	9.328880e-03
+2.000000e+01	4.000000e+00	4.000000e+00	1.670000e-02	2.531945e-03	2.541677e-03
+3.000000e+01	6.000000e+00	6.000000e+00	3.660000e-03	7.490076e-04	7.492805e-04
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2019_I1716440/d04-x01-y01
+ErrorBreakdown: {0: {stat: {dn: -3.82, up: 3.82}, sys: {dn: -2.7, up: 2.72}, 'sys,uncertainty on branching ratio': {dn: -0.7735, up: 0.7735}, 'sys,uncertainty on integrated luminomisty': {dn: -0.4641, up: 0.4641}}, 1: {stat: {dn: -1.05, up: 1.05}, sys: {dn: -0.824, up: 0.849}, 'sys,uncertainty on branching ratio': {dn: -0.32375, up: 0.32375}, 'sys,uncertainty on integrated luminomisty': {dn: -0.19425, up: 0.19425}}, 2: {stat: {dn: -0.405, up: 0.405}, sys: {dn: -0.411, up: 0.424}, 'sys,uncertainty on branching ratio': {dn: -0.15469999999999998, up: 0.15469999999999998}, 'sys,uncertainty on integrated luminomisty': {dn: -0.09282, up: 0.09282}}, 3: {stat: {dn: -0.194, up: 0.194}, sys: {dn: -0.164, up: 0.173}, 'sys,uncertainty on branching ratio': {dn: -0.05775, up: 0.05775}, 'sys,uncertainty on integrated luminomisty': {dn: -0.03465, up: 0.03465}}, 4: {stat: {dn: -0.0928, up: 0.0928}, sys: {dn: -0.0888, up: 0.0919}, 'sys,uncertainty on branching ratio': {dn: -0.03262, up: 0.03262}, 'sys,uncertainty on integrated luminomisty': {dn: -0.019572000000000003, up: 0.019572000000000003}}, 5: {stat: {dn: -0.0252, up: 0.0252}, sys: {dn: -0.0175, up: 0.0183}, 'sys,uncertainty on branching ratio': {dn: -0.0063, up: 0.0063}, 'sys,uncertainty on integrated luminomisty': {dn: -0.00378, up: 0.00378}}, 6: {stat: {dn: -0.01, up: 0.01}, sys: {dn: -0.00542, up: 0.00551}, 'sys,uncertainty on branching ratio': {dn: -0.001841, up: 0.001841}, 'sys,uncertainty on integrated luminomisty': {dn: -0.0011046, up: 0.0011046}}, 7: {stat: {dn: -0.00263, up: 0.00263}, sys: {dn: -0.00089, up: 0.000906}, 'sys,uncertainty on branching ratio': {dn: -0.00029575, up: 0.00029575}, 'sys,uncertainty on integrated luminomisty': {dn: -0.00017745, up: 0.00017745}}}
+IsRef: 1
+Path: /REF/ALICE_2019_I1716440/d04-x01-y01
+Title: doi:10.17182/hepdata.89326.v1/t4
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+2.500000e+00	5.000000e-01	5.000000e-01	2.210000e+01	4.764041e+00	4.775405e+00
+3.500000e+00	5.000000e-01	5.000000e-01	9.250000e+00	1.387092e+00	1.402087e+00
+4.500000e+00	5.000000e-01	5.000000e-01	4.420000e+00	6.045607e-01	6.134726e-01
+5.500000e+00	5.000000e-01	5.000000e-01	1.650000e+00	2.628073e-01	2.685157e-01
+7.000000e+00	1.000000e+00	1.000000e+00	9.320000e-01	1.339567e-01	1.360315e-01
+1.000000e+01	2.000000e+00	2.000000e+00	1.800000e-01	3.154787e-02	3.199857e-02
+1.400000e+01	2.000000e+00	2.000000e+00	5.260000e-02	1.157522e-02	1.161764e-02
+2.000000e+01	4.000000e+00	4.000000e+00	8.450000e-03	2.797849e-03	2.802979e-03
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2019_I1716440/d05-x01-y01
+ErrorBreakdown: {0: {stat: {dn: -19.8, up: 19.8}, sys: {dn: -7.71, up: 7.71}, 'sys,uncertainty on branching ratio': {dn: -0.813, up: 0.813}, 'sys,uncertainty on integrated luminomisty': {dn: -1.7073, up: 1.7073}}, 1: {stat: {dn: -19.5, up: 19.5}, sys: {dn: -10.3, up: 10.3}, 'sys,uncertainty on branching ratio': {dn: -1.54, up: 1.54}, 'sys,uncertainty on integrated luminomisty': {dn: -3.2340000000000004, up: 3.2340000000000004}}, 2: {stat: {dn: -23.9, up: 23.9}, sys: {dn: -9.16, up: 9.16}, 'sys,uncertainty on branching ratio': {dn: -1.72, up: 1.72}, 'sys,uncertainty on integrated luminomisty': {dn: -3.612, up: 3.612}}, 3: {stat: {dn: -18.5, up: 18.5}, sys: {dn: -9.4, up: 9.4}, 'sys,uncertainty on branching ratio': {dn: -1.54, up: 1.54}, 'sys,uncertainty on integrated luminomisty': {dn: -3.2340000000000004, up: 3.2340000000000004}}, 4: {stat: {dn: -12.7, up: 12.7}, sys: {dn: -6.95, up: 6.95}, 'sys,uncertainty on branching ratio': {dn: -1.23, up: 1.23}, 'sys,uncertainty on integrated luminomisty': {dn: -2.583, up: 2.583}}, 5: {stat: {dn: -7.31, up: 7.31}, sys: {dn: -3.49, up: 3.49}, 'sys,uncertainty on branching ratio': {dn: -0.618, up: 0.618}, 'sys,uncertainty on integrated luminomisty': {dn: -1.2978, up: 1.2978}}, 6: {stat: {dn: -5.38, up: 5.38}, sys: {dn: -2.69, up: 2.69}, 'sys,uncertainty on branching ratio': {dn: -0.446, up: 0.446}, 'sys,uncertainty on integrated luminomisty': {dn: -0.9366000000000001, up: 0.9366000000000001}}, 7: {stat: {dn: -4.05, up: 4.05}, sys: {dn: -2.25, up: 2.25}, 'sys,uncertainty on branching ratio': {dn: -0.374, up: 0.374}, 'sys,uncertainty on integrated luminomisty': {dn: -0.7854, up: 0.7854}}, 8: {stat: {dn: -1.57, up: 1.57}, sys: {dn: -1.2, up: 1.2}, 'sys,uncertainty on branching ratio': {dn: -0.19899999999999998, up: 0.19899999999999998}, 'sys,uncertainty on integrated luminomisty': {dn: -0.4179, up: 0.4179}}, 9: {stat: {dn: -0.935, up: 0.935}, sys: {dn: -0.632, up: 0.632}, 'sys,uncertainty on branching ratio': {dn: -0.105, up: 0.105}, 'sys,uncertainty on integrated luminomisty': {dn: -0.2205, up: 0.2205}}, 10: {stat: {dn: -0.531, up: 0.531}, sys: {dn: -0.302, up: 0.302}, 'sys,uncertainty on branching ratio': {dn: -0.0472, up: 0.0472}, 'sys,uncertainty on integrated luminomisty': {dn: -0.09912, up: 0.09912}}, 11: {stat: {dn: -0.335, up: 0.335}, sys: {dn: -0.178, up: 0.178}, 'sys,uncertainty on branching ratio': {dn: -0.0279, up: 0.0279}, 'sys,uncertainty on integrated luminomisty': {dn: -0.05859, up: 0.05859}}, 12: {stat: {dn: -0.138, up: 0.138}, sys: {dn: -0.0855, up: 0.0855}, 'sys,uncertainty on branching ratio': {dn: -0.0134, up: 0.0134}, 'sys,uncertainty on integrated luminomisty': {dn: -0.028140000000000002, up: 0.028140000000000002}}, 13: {stat: {dn: -0.0761, up: 0.0761}, sys: {dn: -0.0279, up: 0.0279}, 'sys,uncertainty on branching ratio': {dn: -0.00436, up: 0.00436}, 'sys,uncertainty on integrated luminomisty': {dn: -0.009156000000000001, up: 0.009156000000000001}}}
+IsRef: 1
+Path: /REF/ALICE_2019_I1716440/d05-x01-y01
+Title: doi:10.17182/hepdata.89326.v1/t5
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+2.500000e-01	2.500000e-01	2.500000e-01	8.130000e+01	2.133213e+01	2.133213e+01
+7.500000e-01	2.500000e-01	2.500000e-01	1.540000e+02	2.234212e+01	2.234212e+01
+1.250000e+00	2.500000e-01	2.500000e-01	1.720000e+02	2.590599e+01	2.590599e+01
+1.750000e+00	2.500000e-01	2.500000e-01	1.540000e+02	2.105802e+01	2.105802e+01
+2.250000e+00	2.500000e-01	2.500000e-01	1.230000e+02	1.475728e+01	1.475728e+01
+2.750000e+00	2.500000e-01	2.500000e-01	6.180000e+01	8.226932e+00	8.226932e+00
+3.250000e+00	2.500000e-01	2.500000e-01	4.460000e+01	6.103821e+00	6.103821e+00
+3.750000e+00	2.500000e-01	2.500000e-01	3.740000e+01	4.713993e+00	4.713993e+00
+4.500000e+00	5.000000e-01	5.000000e-01	1.990000e+01	2.029567e+00	2.029567e+00
+5.500000e+00	5.000000e-01	5.000000e-01	1.050000e+01	1.154684e+00	1.154684e+00
+6.500000e+00	5.000000e-01	5.000000e-01	4.720000e+00	6.206590e-01	6.206590e-01
+7.500000e+00	5.000000e-01	5.000000e-01	2.790000e+00	3.848639e-01	3.848639e-01
+9.000000e+00	1.000000e+00	1.000000e+00	1.340000e+00	1.653048e-01	1.653048e-01
+1.100000e+01	1.000000e+00	1.000000e+00	4.360000e-01	8.168514e-02	8.168514e-02
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2019_I1716440/d06-x01-y01
+ErrorBreakdown: {0: {stat: {dn: -0.119, up: 0.119}, sys: {dn: -0.056, up: 0.056}, 'sys,uncertainty on branching ratio': {dn: -0.015378, up: 0.015378}}, 1: {stat: {dn: -0.051, up: 0.051}, sys: {dn: -0.036, up: 0.036}, 'sys,uncertainty on branching ratio': {dn: -0.012837, up: 0.012837}}, 2: {stat: {dn: -0.037, up: 0.037}, sys: {dn: -0.031, up: 0.031}, 'sys,uncertainty on branching ratio': {dn: -0.012969, up: 0.012969}}, 3: {stat: {dn: -0.029, up: 0.029}, sys: {dn: -0.035, up: 0.035}, 'sys,uncertainty on branching ratio': {dn: -0.014552999999999998, up: 0.014552999999999998}}, 4: {stat: {dn: -0.024, up: 0.024}, sys: {dn: -0.023, up: 0.023}, 'sys,uncertainty on branching ratio': {dn: -0.014454, up: 0.014454}}, 5: {stat: {dn: -0.024, up: 0.024}, sys: {dn: -0.023, up: 0.024}, 'sys,uncertainty on branching ratio': {dn: -0.014586, up: 0.014586}}, 6: {stat: {dn: -0.026, up: 0.026}, sys: {dn: -0.026, up: 0.026}, 'sys,uncertainty on branching ratio': {dn: -0.015312, up: 0.015312}}, 7: {stat: {dn: -0.028, up: 0.028}, sys: {dn: -0.027, up: 0.027}, 'sys,uncertainty on branching ratio': {dn: -0.016071, up: 0.016071}}, 8: {stat: {dn: -0.028, up: 0.028}, sys: {dn: -0.026, up: 0.026}, 'sys,uncertainty on branching ratio': {dn: -0.015476999999999998, up: 0.015476999999999998}}, 9: {stat: {dn: -0.027, up: 0.027}, sys: {dn: -0.024, up: 0.024}, 'sys,uncertainty on branching ratio': {dn: -0.014256, up: 0.014256}}, 10: {stat: {dn: -0.036, up: 0.036}, sys: {dn: -0.027, up: 0.028}, 'sys,uncertainty on branching ratio': {dn: -0.015707999999999996, up: 0.015707999999999996}}, 11: {stat: {dn: -0.04, up: 0.04}, sys: {dn: -0.027, up: 0.027}, 'sys,uncertainty on branching ratio': {dn: -0.015641999999999996, up: 0.015641999999999996}}, 12: {stat: {dn: -0.047, up: 0.047}, sys: {dn: -0.03, up: 0.031}, 'sys,uncertainty on branching ratio': {dn: -0.017061, up: 0.017061}}, 13: {stat: {dn: -0.045, up: 0.045}, sys: {dn: -0.024, up: 0.024}, 'sys,uncertainty on branching ratio': {dn: -0.01419, up: 0.01419}}, 14: {stat: {dn: -0.039, up: 0.039}, sys: {dn: -0.026, up: 0.027}, 'sys,uncertainty on branching ratio': {dn: -0.015246, up: 0.015246}}, 15: {stat: {dn: -0.046, up: 0.046}, sys: {dn: -0.029, up: 0.029}, 'sys,uncertainty on branching ratio': {dn: -0.015608999999999998, up: 0.015608999999999998}}, 16: {stat: {dn: -0.038, up: 0.038}, sys: {dn: -0.024, up: 0.024}, 'sys,uncertainty on branching ratio': {dn: -0.012837, up: 0.012837}}, 17: {stat: {dn: -0.057, up: 0.057}, sys: {dn: -0.04, up: 0.04}, 'sys,uncertainty on branching ratio': {dn: -0.017061, up: 0.017061}}, 18: {stat: {dn: -0.049, up: 0.049}, sys: {dn: -0.024, up: 0.024}, 'sys,uncertainty on branching ratio': {dn: -0.009899999999999999, up: 0.009899999999999999}}, 19: {stat: {dn: -0.132, up: 0.132}, sys: {dn: -0.045, up: 0.045}, 'sys,uncertainty on branching ratio': {dn: -0.014981999999999999, up: 0.014981999999999999}}}
+IsRef: 1
+Path: /REF/ALICE_2019_I1716440/d06-x01-y01
+Title: doi:10.17182/hepdata.89326.v1/t6
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.250000e+00	2.500000e-01	2.500000e-01	4.660000e-01	1.324141e-01	1.324141e-01
+1.750000e+00	2.500000e-01	2.500000e-01	3.890000e-01	6.373216e-02	6.373216e-02
+2.250000e+00	2.500000e-01	2.500000e-01	3.930000e-01	4.998195e-02	4.998195e-02
+2.750000e+00	2.500000e-01	2.500000e-01	4.410000e-01	4.772620e-02	4.772620e-02
+3.250000e+00	2.500000e-01	2.500000e-01	4.380000e-01	3.624801e-02	3.624801e-02
+3.750000e+00	2.500000e-01	2.500000e-01	4.420000e-01	3.630085e-02	3.694254e-02
+4.250000e+00	2.500000e-01	2.500000e-01	4.640000e-01	3.983036e-02	3.983036e-02
+4.750000e+00	2.500000e-01	2.500000e-01	4.870000e-01	4.208654e-02	4.208654e-02
+5.250000e+00	2.500000e-01	2.500000e-01	4.690000e-01	4.122545e-02	4.122545e-02
+5.750000e+00	2.500000e-01	2.500000e-01	4.320000e-01	3.883598e-02	3.883598e-02
+6.250000e+00	2.500000e-01	2.500000e-01	4.760000e-01	4.766279e-02	4.823631e-02
+6.750000e+00	2.500000e-01	2.500000e-01	4.740000e-01	5.073137e-02	5.073137e-02
+7.250000e+00	2.500000e-01	2.500000e-01	5.170000e-01	5.831019e-02	5.883092e-02
+7.750000e+00	2.500000e-01	2.500000e-01	4.300000e-01	5.293728e-02	5.293728e-02
+8.500000e+00	5.000000e-01	5.000000e-01	4.620000e-01	4.928935e-02	4.982410e-02
+9.500000e+00	5.000000e-01	5.000000e-01	4.730000e-01	5.657421e-02	5.657421e-02
+1.100000e+01	1.000000e+00	1.000000e+00	3.890000e-01	4.674172e-02	4.674172e-02
+1.400000e+01	2.000000e+00	2.000000e+00	5.170000e-01	7.169434e-02	7.169434e-02
+2.000000e+01	4.000000e+00	4.000000e+00	3.000000e-01	5.545277e-02	5.545277e-02
+3.000000e+01	6.000000e+00	6.000000e+00	4.540000e-01	1.402621e-01	1.402621e-01
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2019_I1716440/d07-x01-y01
+ErrorBreakdown: {0: {stat: {dn: -0.077, up: 0.077}, sys: {dn: -0.046, up: 0.046}, 'sys,uncertainty on branching ratio': {dn: -0.0026179999999999997, up: 0.0026179999999999997}}, 1: {stat: {dn: -0.058, up: 0.058}, sys: {dn: -0.038, up: 0.038}, 'sys,uncertainty on branching ratio': {dn: -0.003199, up: 0.003199}}, 2: {stat: {dn: -0.049, up: 0.049}, sys: {dn: -0.037, up: 0.037}, 'sys,uncertainty on branching ratio': {dn: -0.003556, up: 0.003556}}, 3: {stat: {dn: -0.036, up: 0.036}, sys: {dn: -0.023, up: 0.023}, 'sys,uncertainty on branching ratio': {dn: -0.003108, up: 0.003108}}, 4: {stat: {dn: -0.039, up: 0.039}, sys: {dn: -0.022, up: 0.022}, 'sys,uncertainty on branching ratio': {dn: -0.003619, up: 0.003619}}, 5: {stat: {dn: -0.037, up: 0.037}, sys: {dn: -0.024, up: 0.024}, 'sys,uncertainty on branching ratio': {dn: -0.0038780000000000004, up: 0.0038780000000000004}}, 6: {stat: {dn: -0.038, up: 0.038}, sys: {dn: -0.023, up: 0.023}, 'sys,uncertainty on branching ratio': {dn: -0.003689, up: 0.003689}}, 7: {stat: {dn: -0.034, up: 0.034}, sys: {dn: -0.021, up: 0.021}, 'sys,uncertainty on branching ratio': {dn: -0.003255, up: 0.003255}}, 8: {stat: {dn: -0.036, up: 0.036}, sys: {dn: -0.022, up: 0.023}, 'sys,uncertainty on branching ratio': {dn: -0.0034649999999999993, up: 0.0034649999999999993}}, 9: {stat: {dn: -0.047, up: 0.047}, sys: {dn: -0.027, up: 0.028}, 'sys,uncertainty on branching ratio': {dn: -0.004004, up: 0.004004}}, 10: {stat: {dn: -0.045, up: 0.045}, sys: {dn: -0.023, up: 0.024}, 'sys,uncertainty on branching ratio': {dn: -0.003486, up: 0.003486}}, 11: {stat: {dn: -0.05, up: 0.05}, sys: {dn: -0.023, up: 0.024}, 'sys,uncertainty on branching ratio': {dn: -0.003423, up: 0.003423}}, 12: {stat: {dn: -0.061, up: 0.061}, sys: {dn: -0.027, up: 0.028}, 'sys,uncertainty on branching ratio': {dn: -0.004031999999999999, up: 0.004031999999999999}}, 13: {stat: {dn: -0.054, up: 0.054}, sys: {dn: -0.028, up: 0.029}, 'sys,uncertainty on branching ratio': {dn: -0.004116, up: 0.004116}}, 14: {stat: {dn: -0.06, up: 0.06}, sys: {dn: -0.025, up: 0.026}, 'sys,uncertainty on branching ratio': {dn: -0.003940999999999999, up: 0.003940999999999999}}, 15: {stat: {dn: -0.051, up: 0.051}, sys: {dn: -0.02, up: 0.021}, 'sys,uncertainty on branching ratio': {dn: -0.003325, up: 0.003325}}, 16: {stat: {dn: -0.075, up: 0.075}, sys: {dn: -0.039, up: 0.039}, 'sys,uncertainty on branching ratio': {dn: -0.004305, up: 0.004305}}, 17: {stat: {dn: -0.086, up: 0.086}, sys: {dn: -0.03, up: 0.03}, 'sys,uncertainty on branching ratio': {dn: -0.0032899999999999995, up: 0.0032899999999999995}}, 18: {stat: {dn: -0.247, up: 0.247}, sys: {dn: -0.052, up: 0.053}, 'sys,uncertainty on branching ratio': {dn: -0.005677000000000001, up: 0.005677000000000001}}}
+IsRef: 1
+Path: /REF/ALICE_2019_I1716440/d07-x01-y01
+Title: doi:10.17182/hepdata.89326.v1/t7
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.500000e+00	5.000000e-01	5.000000e-01	3.740000e-01	8.973212e-02	8.973212e-02
+2.250000e+00	2.500000e-01	2.500000e-01	4.570000e-01	6.941350e-02	6.941350e-02
+2.750000e+00	2.500000e-01	2.500000e-01	5.080000e-01	6.150321e-02	6.150321e-02
+3.250000e+00	2.500000e-01	2.500000e-01	4.440000e-01	4.283293e-02	4.283293e-02
+3.750000e+00	2.500000e-01	2.500000e-01	5.170000e-01	4.492324e-02	4.492324e-02
+4.250000e+00	2.500000e-01	2.500000e-01	5.540000e-01	4.427233e-02	4.427233e-02
+4.750000e+00	2.500000e-01	2.500000e-01	5.270000e-01	4.457139e-02	4.457139e-02
+5.250000e+00	2.500000e-01	2.500000e-01	4.650000e-01	4.009483e-02	4.009483e-02
+5.750000e+00	2.500000e-01	2.500000e-01	4.950000e-01	4.233209e-02	4.286031e-02
+6.250000e+00	2.500000e-01	2.500000e-01	5.720000e-01	5.435101e-02	5.485464e-02
+6.750000e+00	2.500000e-01	2.500000e-01	4.980000e-01	5.065720e-02	5.111900e-02
+7.250000e+00	2.500000e-01	2.500000e-01	4.890000e-01	5.514270e-02	5.556723e-02
+7.750000e+00	2.500000e-01	2.500000e-01	5.760000e-01	6.683006e-02	6.724029e-02
+8.500000e+00	5.000000e-01	5.000000e-01	5.880000e-01	6.096672e-02	6.143241e-02
+9.500000e+00	5.000000e-01	5.000000e-01	5.630000e-01	6.511936e-02	6.550978e-02
+1.100000e+01	1.000000e+00	1.000000e+00	4.750000e-01	5.488220e-02	5.525446e-02
+1.400000e+01	2.000000e+00	2.000000e+00	6.150000e-01	8.464356e-02	8.464356e-02
+2.000000e+01	4.000000e+00	4.000000e+00	4.700000e-01	9.114178e-02	9.114178e-02
+3.000000e+01	6.000000e+00	6.000000e+00	8.110000e-01	2.524782e-01	2.526860e-01
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2019_I1716440/d08-x01-y01
+ErrorBreakdown: {0: {stat: {dn: -0.045, up: 0.045}, sys: {dn: -0.032, up: 0.032}, 'sys,uncertainty on branching ratio': {dn: -0.009472000000000001, up: 0.009472000000000001}}, 1: {stat: {dn: -0.025, up: 0.025}, sys: {dn: -0.016, up: 0.016}, 'sys,uncertainty on branching ratio': {dn: -0.007992, up: 0.007992}}, 2: {stat: {dn: -0.023, up: 0.023}, sys: {dn: -0.019, up: 0.019}, 'sys,uncertainty on branching ratio': {dn: -0.008917, up: 0.008917}}, 3: {stat: {dn: -0.021, up: 0.021}, sys: {dn: -0.013, up: 0.013}, 'sys,uncertainty on branching ratio': {dn: -0.006401, up: 0.006401}}, 4: {stat: {dn: -0.028, up: 0.028}, sys: {dn: -0.019, up: 0.019}, 'sys,uncertainty on branching ratio': {dn: -0.009731, up: 0.009731}}, 5: {stat: {dn: -0.032, up: 0.032}, sys: {dn: -0.016, up: 0.016}, 'sys,uncertainty on branching ratio': {dn: -0.008140000000000001, up: 0.008140000000000001}}, 6: {stat: {dn: -0.073, up: 0.073}, sys: {dn: -0.033, up: 0.033}, 'sys,uncertainty on branching ratio': {dn: -0.012765, up: 0.012765}}, 7: {stat: {dn: -0.079, up: 0.079}, sys: {dn: -0.022, up: 0.022}, 'sys,uncertainty on branching ratio': {dn: -0.008768999999999999, up: 0.008768999999999999}}}
+IsRef: 1
+Path: /REF/ALICE_2019_I1716440/d08-x01-y01
+Title: doi:10.17182/hepdata.89326.v1/t8
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+2.500000e+00	5.000000e-01	5.000000e-01	2.560000e-01	5.602427e-02	5.602427e-02
+3.500000e+00	5.000000e-01	5.000000e-01	2.160000e-01	3.073877e-02	3.073877e-02
+4.500000e+00	5.000000e-01	5.000000e-01	2.410000e-01	3.113700e-02	3.113700e-02
+5.500000e+00	5.000000e-01	5.000000e-01	1.730000e-01	2.551417e-02	2.551417e-02
+7.000000e+00	1.000000e+00	1.000000e+00	2.630000e-01	3.520927e-02	3.520927e-02
+1.000000e+01	2.000000e+00	2.000000e+00	2.200000e-01	3.669141e-02	3.669141e-02
+1.400000e+01	2.000000e+00	2.000000e+00	3.450000e-01	8.112303e-02	8.112303e-02
+2.000000e+01	4.000000e+00	4.000000e+00	2.370000e-01	8.247360e-02	8.247360e-02
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2019_I1716440/d09-x01-y01
+ErrorBreakdown: {0: {stat: {dn: -0.111, up: 0.111}, sys: {dn: -0.075, up: 0.075}, 'sys,uncertainty on branching ratio': {dn: -0.029187, up: 0.029187}}, 1: {stat: {dn: -0.057, up: 0.057}, sys: {dn: -0.036, up: 0.036}, 'sys,uncertainty on branching ratio': {dn: -0.023124, up: 0.023124}}, 2: {stat: {dn: -0.049, up: 0.049}, sys: {dn: -0.038, up: 0.038}, 'sys,uncertainty on branching ratio': {dn: -0.02397, up: 0.02397}}, 3: {stat: {dn: -0.046, up: 0.046}, sys: {dn: -0.029, up: 0.029}, 'sys,uncertainty on branching ratio': {dn: -0.018001, up: 0.018001}}, 4: {stat: {dn: -0.057, up: 0.057}, sys: {dn: -0.038, up: 0.038}, 'sys,uncertainty on branching ratio': {dn: -0.025944000000000005, up: 0.025944000000000005}}, 5: {stat: {dn: -0.071, up: 0.071}, sys: {dn: -0.033, up: 0.033}, 'sys,uncertainty on branching ratio': {dn: -0.023312, up: 0.023312}}, 6: {stat: {dn: -0.133, up: 0.133}, sys: {dn: -0.055, up: 0.055}, 'sys,uncertainty on branching ratio': {dn: -0.031396, up: 0.031396}}, 7: {stat: {dn: -0.261, up: 0.261}, sys: {dn: -0.069, up: 0.069}, 'sys,uncertainty on branching ratio': {dn: -0.037083000000000005, up: 0.037083000000000005}}}
+IsRef: 1
+Path: /REF/ALICE_2019_I1716440/d09-x01-y01
+Title: doi:10.17182/hepdata.89326.v1/t9
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+2.500000e+00	5.000000e-01	5.000000e-01	6.210000e-01	1.371054e-01	1.371054e-01
+3.500000e+00	5.000000e-01	5.000000e-01	4.920000e-01	7.127215e-02	7.127215e-02
+4.500000e+00	5.000000e-01	5.000000e-01	5.100000e-01	6.647978e-02	6.647978e-02
+5.500000e+00	5.000000e-01	5.000000e-01	3.830000e-01	5.728033e-02	5.728033e-02
+7.000000e+00	1.000000e+00	1.000000e+00	5.520000e-01	7.325361e-02	7.325361e-02
+1.000000e+01	2.000000e+00	2.000000e+00	4.960000e-01	8.169118e-02	8.169118e-02
+1.400000e+01	2.000000e+00	2.000000e+00	6.680000e-01	1.473082e-01	1.473082e-01
+2.000000e+01	4.000000e+00	4.000000e+00	7.890000e-01	2.725016e-01	2.725016e-01
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2019_I1716440/d10-x01-y01
+ErrorBreakdown: {0: {stat: {dn: -0.096, up: 0.096}, sys: {dn: -0.071, up: 0.072}, 'sys,uncertainty on branching ratio': {dn: -0.016599, up: 0.016599}}, 1: {stat: {dn: -0.04, up: 0.04}, sys: {dn: -0.057, up: 0.057}, 'sys,uncertainty on branching ratio': {dn: -0.014090999999999998, up: 0.014090999999999998}}, 2: {stat: {dn: -0.035, up: 0.035}, sys: {dn: -0.041, up: 0.041}, 'sys,uncertainty on branching ratio': {dn: -0.015707999999999996, up: 0.015707999999999996}}, 3: {stat: {dn: -0.033, up: 0.033}, sys: {dn: -0.04, up: 0.04}, 'sys,uncertainty on branching ratio': {dn: -0.015378, up: 0.015378}}, 4: {stat: {dn: -0.03, up: 0.03}, sys: {dn: -0.033, up: 0.033}, 'sys,uncertainty on branching ratio': {dn: -0.012539999999999999, up: 0.012539999999999999}}, 5: {stat: {dn: -0.037, up: 0.037}, sys: {dn: -0.035, up: 0.036}, 'sys,uncertainty on branching ratio': {dn: -0.013365000000000002, up: 0.013365000000000002}}, 6: {stat: {dn: -0.063, up: 0.063}, sys: {dn: -0.048, up: 0.05}, 'sys,uncertainty on branching ratio': {dn: -0.017622, up: 0.017622}}, 7: {stat: {dn: -0.049, up: 0.049}, sys: {dn: -0.043, up: 0.044}, 'sys,uncertainty on branching ratio': {dn: -0.016037999999999997, up: 0.016037999999999997}}, 8: {stat: {dn: -0.065, up: 0.065}, sys: {dn: -0.036, up: 0.036}, 'sys,uncertainty on branching ratio': {dn: -0.013595999999999997, up: 0.013595999999999997}}, 9: {stat: {dn: -0.08, up: 0.08}, sys: {dn: -0.046, up: 0.047}, 'sys,uncertainty on branching ratio': {dn: -0.014718, up: 0.014718}}, 10: {stat: {dn: -0.19, up: 0.19}, sys: {dn: -0.072, up: 0.073}, 'sys,uncertainty on branching ratio': {dn: -0.021747, up: 0.021747}}}
+IsRef: 1
+Path: /REF/ALICE_2019_I1716440/d10-x01-y01
+Title: doi:10.17182/hepdata.89326.v1/t10
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.500000e+00	5.000000e-01	5.000000e-01	5.030000e-01	1.205509e-01	1.211426e-01
+2.500000e+00	5.000000e-01	5.000000e-01	4.270000e-01	7.104616e-02	7.104616e-02
+3.500000e+00	5.000000e-01	5.000000e-01	4.760000e-01	5.614928e-02	5.614928e-02
+4.500000e+00	5.000000e-01	5.000000e-01	4.660000e-01	5.408773e-02	5.408773e-02
+5.500000e+00	5.000000e-01	5.000000e-01	3.800000e-01	4.632765e-02	4.632765e-02
+6.500000e+00	5.000000e-01	5.000000e-01	4.050000e-01	5.265570e-02	5.332563e-02
+7.500000e+00	5.000000e-01	5.000000e-01	5.340000e-01	8.113898e-02	8.233793e-02
+9.000000e+00	1.000000e+00	1.000000e+00	4.860000e-01	6.713581e-02	6.778066e-02
+1.100000e+01	1.000000e+00	1.000000e+00	4.120000e-01	7.553709e-02	7.553709e-02
+1.400000e+01	2.000000e+00	2.000000e+00	4.460000e-01	9.344849e-02	9.394477e-02
+2.000000e+01	4.000000e+00	4.000000e+00	6.590000e-01	2.043451e-01	2.046996e-01
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2019_I1716440/d11-x01-y01
+ErrorBreakdown: {0: {stat: {dn: -0.134, up: 0.134}, sys: {dn: -0.07, up: 0.071}, 'sys,uncertainty on branching ratio': {dn: -0.0038429999999999996, up: 0.0038429999999999996}}, 1: {stat: {dn: -0.061, up: 0.061}, sys: {dn: -0.039, up: 0.04}, 'sys,uncertainty on branching ratio': {dn: -0.003339, up: 0.003339}}, 2: {stat: {dn: -0.05, up: 0.05}, sys: {dn: -0.042, up: 0.042}, 'sys,uncertainty on branching ratio': {dn: -0.0034999999999999996, up: 0.0034999999999999996}}, 3: {stat: {dn: -0.045, up: 0.045}, sys: {dn: -0.037, up: 0.038}, 'sys,uncertainty on branching ratio': {dn: -0.003234, up: 0.003234}}, 4: {stat: {dn: -0.038, up: 0.038}, sys: {dn: -0.034, up: 0.035}, 'sys,uncertainty on branching ratio': {dn: -0.0029189999999999997, up: 0.0029189999999999997}}, 5: {stat: {dn: -0.041, up: 0.041}, sys: {dn: -0.034, up: 0.034}, 'sys,uncertainty on branching ratio': {dn: -0.0028699999999999993, up: 0.0028699999999999993}}, 6: {stat: {dn: -0.066, up: 0.066}, sys: {dn: -0.04, up: 0.042}, 'sys,uncertainty on branching ratio': {dn: -0.003381, up: 0.003381}}, 7: {stat: {dn: -0.053, up: 0.053}, sys: {dn: -0.035, up: 0.036}, 'sys,uncertainty on branching ratio': {dn: -0.0030099999999999997, up: 0.0030099999999999997}}, 8: {stat: {dn: -0.096, up: 0.096}, sys: {dn: -0.046, up: 0.047}, 'sys,uncertainty on branching ratio': {dn: -0.003906, up: 0.003906}}, 9: {stat: {dn: -0.117, up: 0.117}, sys: {dn: -0.056, up: 0.057}, 'sys,uncertainty on branching ratio': {dn: -0.004396, up: 0.004396}}, 10: {stat: {dn: -0.205, up: 0.205}, sys: {dn: -0.058, up: 0.059}, 'sys,uncertainty on branching ratio': {dn: -0.004592, up: 0.004592}}}
+IsRef: 1
+Path: /REF/ALICE_2019_I1716440/d11-x01-y01
+Title: doi:10.17182/hepdata.89326.v1/t11
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.500000e+00	5.000000e-01	5.000000e-01	5.490000e-01	1.512308e-01	1.516963e-01
+2.500000e+00	5.000000e-01	5.000000e-01	4.770000e-01	7.247861e-02	7.302156e-02
+3.500000e+00	5.000000e-01	5.000000e-01	5.000000e-01	6.539304e-02	6.539304e-02
+4.500000e+00	5.000000e-01	5.000000e-01	4.620000e-01	5.834774e-02	5.898694e-02
+5.500000e+00	5.000000e-01	5.000000e-01	4.170000e-01	5.107368e-02	5.174476e-02
+6.500000e+00	5.000000e-01	5.000000e-01	4.100000e-01	5.334076e-02	5.334076e-02
+7.500000e+00	5.000000e-01	5.000000e-01	4.830000e-01	7.724915e-02	7.830346e-02
+9.000000e+00	1.000000e+00	1.000000e+00	4.300000e-01	6.358506e-02	6.414094e-02
+1.100000e+01	1.000000e+00	1.000000e+00	5.580000e-01	1.065235e-01	1.069591e-01
+1.400000e+01	2.000000e+00	2.000000e+00	6.280000e-01	1.297857e-01	1.302203e-01
+2.000000e+01	4.000000e+00	4.000000e+00	6.560000e-01	2.130964e-01	2.133708e-01
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2019_I1716440/d12-x01-y01
+ErrorBreakdown: {0: {stat: {dn: -0.051, up: 0.051}, sys: {dn: -0.023, up: 0.023}, 'sys,uncertainty on branching ratio': {dn: -0.006623, up: 0.006623}}, 1: {stat: {dn: -0.036, up: 0.036}, sys: {dn: -0.027, up: 0.027}, 'sys,uncertainty on branching ratio': {dn: -0.007844, up: 0.007844}}, 2: {stat: {dn: -0.04, up: 0.04}, sys: {dn: -0.028, up: 0.028}, 'sys,uncertainty on branching ratio': {dn: -0.008214, up: 0.008214}}, 3: {stat: {dn: -0.039, up: 0.039}, sys: {dn: -0.03, up: 0.03}, 'sys,uncertainty on branching ratio': {dn: -0.008731999999999998, up: 0.008731999999999998}}}
+IsRef: 1
+Path: /REF/ALICE_2019_I1716440/d12-x01-y01
+Title: doi:10.17182/hepdata.89326.v1/t12
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+3.000000e+00	1.000000e+00	1.000000e+00	1.790000e-01	5.633706e-02	5.633706e-02
+5.000000e+00	1.000000e+00	1.000000e+00	2.120000e-01	4.567853e-02	4.567853e-02
+7.000000e+00	1.000000e+00	1.000000e+00	2.220000e-01	4.951232e-02	4.951232e-02
+1.000000e+01	2.000000e+00	2.000000e+00	2.360000e-01	4.997247e-02	4.997247e-02
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2019_I1716440/d13-x01-y01
+ErrorBreakdown: {0: {stat: {dn: -0.115, up: 0.115}, sys: {dn: -0.06, up: 0.06}, 'sys,uncertainty on branching ratio': {dn: -0.019035000000000003, up: 0.019035000000000003}}, 1: {stat: {dn: -0.081, up: 0.081}, sys: {dn: -0.062, up: 0.062}, 'sys,uncertainty on branching ratio': {dn: -0.022842, up: 0.022842}}, 2: {stat: {dn: -0.088, up: 0.088}, sys: {dn: -0.064, up: 0.063}, 'sys,uncertainty on branching ratio': {dn: -0.023358999999999998, up: 0.023358999999999998}}, 3: {stat: {dn: -0.082, up: 0.082}, sys: {dn: -0.065, up: 0.065}, 'sys,uncertainty on branching ratio': {dn: -0.023876, up: 0.023876}}}
+IsRef: 1
+Path: /REF/ALICE_2019_I1716440/d13-x01-y01
+Title: doi:10.17182/hepdata.89326.v1/t13
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+3.000000e+00	1.000000e+00	1.000000e+00	4.050000e-01	1.311005e-01	1.311005e-01
+5.000000e+00	1.000000e+00	1.000000e+00	4.860000e-01	1.045311e-01	1.045311e-01
+7.000000e+00	1.000000e+00	1.000000e+00	4.970000e-01	1.112908e-01	1.107188e-01
+1.000000e+01	2.000000e+00	2.000000e+00	5.080000e-01	1.073269e-01	1.073269e-01
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2019_I1716440/d14-x01-y01
+ErrorBreakdown: {0: {stat: {dn: -0.264, up: 0.264}, sys: {dn: -0.161, up: 0.186}}, 1: {stat: {dn: -0.167, up: 0.167}, sys: {dn: -0.131, up: 0.131}}, 2: {stat: {dn: -0.0916, up: 0.0916}, sys: {dn: -0.123, up: 0.123}}, 3: {stat: {dn: -0.075, up: 0.075}, sys: {dn: -0.109, up: 0.109}}, 4: {stat: {dn: -0.0866, up: 0.0866}, sys: {dn: -0.124, up: 0.123}}, 5: {stat: {dn: -0.0968, up: 0.0968}, sys: {dn: -0.132, up: 0.131}}, 6: {stat: {dn: -0.125, up: 0.125}, sys: {dn: -0.147, up: 0.146}}, 7: {stat: {dn: -0.141, up: 0.141}, sys: {dn: -0.121, up: 0.121}}, 8: {stat: {dn: -0.138, up: 0.138}, sys: {dn: -0.136, up: 0.135}}, 9: {stat: {dn: -0.186, up: 0.186}, sys: {dn: -0.125, up: 0.125}}, 10: {stat: {dn: -0.269, up: 0.269}, sys: {dn: -0.17, up: 0.17}}, 11: {stat: {dn: -0.306, up: 0.306}, sys: {dn: -0.119, up: 0.119}}, 12: {stat: {dn: -0.853, up: 0.853}, sys: {dn: -0.233, up: 0.233}}}
+IsRef: 1
+Path: /REF/ALICE_2019_I1716440/d14-x01-y01
+Title: doi:10.17182/hepdata.89326.v1/t14
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+5.000000e-01	5.000000e-01	5.000000e-01	8.660000e-01	3.092200e-01	3.229427e-01
+1.500000e+00	5.000000e-01	5.000000e-01	1.170000e+00	2.122499e-01	2.122499e-01
+2.500000e+00	5.000000e-01	5.000000e-01	1.250000e+00	1.533609e-01	1.533609e-01
+3.500000e+00	5.000000e-01	5.000000e-01	1.190000e+00	1.323102e-01	1.323102e-01
+4.500000e+00	5.000000e-01	5.000000e-01	1.350000e+00	1.512467e-01	1.504279e-01
+5.500000e+00	5.000000e-01	5.000000e-01	1.400000e+00	1.636895e-01	1.628841e-01
+6.500000e+00	5.000000e-01	5.000000e-01	1.510000e+00	1.929611e-01	1.922004e-01
+7.500000e+00	5.000000e-01	5.000000e-01	1.260000e+00	1.858010e-01	1.858010e-01
+9.000000e+00	1.000000e+00	1.000000e+00	1.440000e+00	1.937524e-01	1.930518e-01
+1.100000e+01	1.000000e+00	1.000000e+00	1.330000e+00	2.241004e-01	2.241004e-01
+1.400000e+01	2.000000e+00	2.000000e+00	1.540000e+00	3.182153e-01	3.182153e-01
+2.000000e+01	4.000000e+00	4.000000e+00	1.080000e+00	3.283245e-01	3.283245e-01
+3.000000e+01	6.000000e+00	6.000000e+00	2.120000e+00	8.842500e-01	8.842500e-01
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2019_I1716440/d15-x01-y01
+ErrorBreakdown: {0: {stat: {dn: -0.279, up: 0.279}, sys: {dn: -0.21, up: 0.209}}, 1: {stat: {dn: -0.11, up: 0.11}, sys: {dn: -0.185, up: 0.185}}, 2: {stat: {dn: -0.0696, up: 0.0696}, sys: {dn: -0.128, up: 0.128}}, 3: {stat: {dn: -0.0683, up: 0.0683}, sys: {dn: -0.139, up: 0.139}}, 4: {stat: {dn: -0.0687, up: 0.0687}, sys: {dn: -0.126, up: 0.126}}, 5: {stat: {dn: -0.09, up: 0.09}, sys: {dn: -0.145, up: 0.145}}, 6: {stat: {dn: -0.111, up: 0.111}, sys: {dn: -0.159, up: 0.159}}, 7: {stat: {dn: -0.109, up: 0.109}, sys: {dn: -0.172, up: 0.172}}, 8: {stat: {dn: -0.169, up: 0.169}, sys: {dn: -0.167, up: 0.167}}, 9: {stat: {dn: -0.16, up: 0.16}, sys: {dn: -0.167, up: 0.167}}, 10: {stat: {dn: -0.417, up: 0.417}, sys: {dn: -0.31, up: 0.31}}}
+IsRef: 1
+Path: /REF/ALICE_2019_I1716440/d15-x01-y01
+Title: doi:10.17182/hepdata.89326.v1/t15
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.500000e+00	5.000000e-01	5.000000e-01	1.360000e+00	3.492005e-01	3.486001e-01
+2.500000e+00	5.000000e-01	5.000000e-01	1.300000e+00	2.152324e-01	2.152324e-01
+3.500000e+00	5.000000e-01	5.000000e-01	1.290000e+00	1.456989e-01	1.456989e-01
+4.500000e+00	5.000000e-01	5.000000e-01	1.330000e+00	1.548738e-01	1.548738e-01
+5.500000e+00	5.000000e-01	5.000000e-01	1.180000e+00	1.435120e-01	1.435120e-01
+6.500000e+00	5.000000e-01	5.000000e-01	1.290000e+00	1.706605e-01	1.706605e-01
+7.500000e+00	5.000000e-01	5.000000e-01	1.400000e+00	1.939124e-01	1.939124e-01
+9.000000e+00	1.000000e+00	1.000000e+00	1.500000e+00	2.036296e-01	2.036296e-01
+1.100000e+01	1.000000e+00	1.000000e+00	1.410000e+00	2.375921e-01	2.375921e-01
+1.400000e+01	2.000000e+00	2.000000e+00	1.330000e+00	2.312769e-01	2.312769e-01
+2.000000e+01	4.000000e+00	4.000000e+00	2.380000e+00	5.196047e-01	5.196047e-01
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2019_I1716440/d16-x01-y01
+ErrorBreakdown: {0: {stat: {dn: -0.498, up: 0.498}, sys: {dn: -0.282, up: 0.28}}, 1: {stat: {dn: -0.17, up: 0.17}, sys: {dn: -0.132, up: 0.132}}, 2: {stat: {dn: -0.124, up: 0.124}, sys: {dn: -0.125, up: 0.124}}, 3: {stat: {dn: -0.102, up: 0.102}, sys: {dn: -0.11, up: 0.11}}, 4: {stat: {dn: -0.0989, up: 0.0989}, sys: {dn: -0.117, up: 0.117}}, 5: {stat: {dn: -0.0973, up: 0.0973}, sys: {dn: -0.11, up: 0.11}}, 6: {stat: {dn: -0.126, up: 0.126}, sys: {dn: -0.11, up: 0.11}}, 7: {stat: {dn: -0.113, up: 0.113}, sys: {dn: -0.105, up: 0.105}}, 8: {stat: {dn: -0.231, up: 0.231}, sys: {dn: -0.152, up: 0.152}}, 9: {stat: {dn: -0.221, up: 0.221}, sys: {dn: -0.15, up: 0.15}}, 10: {stat: {dn: -0.348, up: 0.348}, sys: {dn: -0.146, up: 0.146}}}
+IsRef: 1
+Path: /REF/ALICE_2019_I1716440/d16-x01-y01
+Title: doi:10.17182/hepdata.89326.v1/t16
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.500000e+00	5.000000e-01	5.000000e-01	1.740000e+00	5.723006e-01	5.713178e-01
+2.500000e+00	5.000000e-01	5.000000e-01	1.270000e+00	2.152301e-01	2.152301e-01
+3.500000e+00	5.000000e-01	5.000000e-01	1.280000e+00	1.760710e-01	1.753625e-01
+4.500000e+00	5.000000e-01	5.000000e-01	1.160000e+00	1.500133e-01	1.500133e-01
+5.500000e+00	5.000000e-01	5.000000e-01	1.240000e+00	1.531999e-01	1.531999e-01
+6.500000e+00	5.000000e-01	5.000000e-01	1.160000e+00	1.468581e-01	1.468581e-01
+7.500000e+00	5.000000e-01	5.000000e-01	1.160000e+00	1.672603e-01	1.672603e-01
+9.000000e+00	1.000000e+00	1.000000e+00	1.080000e+00	1.542530e-01	1.542530e-01
+1.100000e+01	1.000000e+00	1.000000e+00	1.580000e+00	2.765231e-01	2.765231e-01
+1.400000e+01	2.000000e+00	2.000000e+00	1.590000e+00	2.670974e-01	2.670974e-01
+2.000000e+01	4.000000e+00	4.000000e+00	1.530000e+00	3.773857e-01	3.773857e-01
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2019_I1716440/d17-x01-y01
+ErrorBreakdown: {0: {stat: {dn: -0.278, up: 0.278}, sys: {dn: -0.15, up: 0.15}}, 1: {stat: {dn: -0.238, up: 0.238}, sys: {dn: -0.209, up: 0.209}}, 2: {stat: {dn: -0.236, up: 0.236}, sys: {dn: -0.188, up: 0.188}}, 3: {stat: {dn: -0.313, up: 0.313}, sys: {dn: -0.237, up: 0.237}}}
+IsRef: 1
+Path: /REF/ALICE_2019_I1716440/d17-x01-y01
+Title: doi:10.17182/hepdata.89326.v1/t17
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+3.000000e+00	1.000000e+00	1.000000e+00	9.100000e-01	3.158861e-01	3.158861e-01
+5.000000e+00	1.000000e+00	1.000000e+00	1.330000e+00	3.167412e-01	3.167412e-01
+7.000000e+00	1.000000e+00	1.000000e+00	1.200000e+00	3.017284e-01	3.017284e-01
+1.000000e+01	2.000000e+00	2.000000e+00	1.510000e+00	3.926041e-01	3.926041e-01
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2019_I1716440/d18-x01-y01
+ErrorBreakdown: {0: {stat: {dn: -20.0, up: 20.0}, sys_1: {dn: -30.0, up: 30.0}, sys_2: {dn: -9.0, up: 9.0}, sys_3: {dn: -5.0, up: 5.0}}, 1: {stat: {dn: -13.0, up: 13.0}, sys_1: {dn: -13.0, up: 13.0}, sys_2: {dn: -4.0, up: 4.0}, sys_3: {dn: -6.0, up: 6.0}, sys_4: {dn: -13.0, up: 50.0}}, 2: {stat: {dn: -15.0, up: 15.0}, sys_1: {dn: -14.0, up: 14.0}, sys_2: {dn: -4.0, up: 4.0}, sys_3: {dn: -2.0, up: 2.0}, sys_4: {dn: -12.0, up: 48.0}}, 3: {stat: {dn: -9.0, up: 9.0}, sys_1: {dn: -10.0, up: 10.0}, sys_2: {dn: -2.0, up: 2.0}, sys_3: {dn: -3.0, up: 3.0}, sys_4: {dn: -26.0, up: 31.0}}}
+IsRef: 1
+Path: /REF/ALICE_2019_I1716440/d18-x01-y01
+Title: doi:10.17182/hepdata.89326.v1/t18
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.000000e+00	5.000000e-01	5.000000e-01	4.470000e+02	3.749667e+01	3.749667e+01
+2.000000e+00	5.000000e-01	5.000000e-01	1.840000e+02	2.364318e+01	5.375872e+01
+3.000000e+00	5.000000e-01	5.000000e-01	1.780000e+02	2.418677e+01	5.239275e+01
+4.000000e+00	5.000000e-01	5.000000e-01	9.500000e+01	2.949576e+01	3.398529e+01
+END YODA_SCATTER2D_V2
+
+
+BEGIN YODA_SCATTER2D_V2 /REF/ALICE_2019_I1716440/d18-x01-y02
+ErrorBreakdown: {0: {stat: {dn: -0.03, up: 0.03}, sys: {dn: -0.03, up: 0.03}}}
+IsRef: 1
+Path: /REF/ALICE_2019_I1716440/d18-x01-y02
+Title: doi:10.17182/hepdata.89326.v1/t18
+Type: Scatter2D
+---
+# xval	 xerr-	 xerr+	 yval	 yerr-	 yerr+	
+1.000000e+00	5.000000e-01	5.000000e-01	2.060000e+00	4.242641e-02	4.242641e-02
+END YODA_SCATTER2D_V2
+
+
