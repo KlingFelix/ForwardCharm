@@ -1677,11 +1677,13 @@ class Plotting():
         histogram = hist[-11:]
         xVals, yVals, xErrs, yErrs, xEdges = self.add_data(ax, analysis=analysis,histogram=histogram)
         
+        
         # add simulation
         for sample, label, col, ls, lw in models:
             values1 = np.array(self.get_ptbins_from_simuation(sample, pid  , xVals, xErrs, ymin, ymax, perdy, onlyplus, factors[pid]))
             values0 = np.array(self.get_ptbins_from_simuation(sample, "421", xVals, xErrs, ymin, ymax, perdy, onlyplus, factor=1))
-            ax.hist(values1.T[0], weights=values1.T[1]/values0.T[1], bins=xEdges, histtype='step', color=col, ls=ls)
+            values = [0 if v1*v2==0 else v1/v2 for v1,v2 in zip(values1.T[1],values0.T[1])]
+            ax.hist(values1.T[0], weights=values, bins=xEdges, histtype='step', color=col, ls=ls)
             ax.plot([-1,-1], [0,0], label=label, color=col, ls=ls)
         
         # finish plot

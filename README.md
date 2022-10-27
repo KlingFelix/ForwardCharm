@@ -26,14 +26,18 @@ Currently, we have the following predictions:
  - **HERWIG 7**: *provided by Peter*.
      Multi purpose MC generator, used to generate charm events in the hard process  using its default. See [Manual](https://herwig.hepforge.org/) for information. This generator has not been tuned/validated for charm production.
      
- **kT factorization (1)**
- - **kt-linear-FF**: *provided by Anna, Atri, Felix and Ina*.
+ **kT factorization**
+ - **kt: ANNA-linear-FF**: *provided by Anna, Atri, Felix and Ina*.
      Prediction based on kT factorization without gluon saturation. Fragmentation modelled using Peterson fragmentation function. 
- - **kt-saturation-FF**: *provided by Anna, Atri, Felix and Ina*.
+ - **kt: ANNA-saturation-FF**: *provided by Anna, Atri, Felix and Ina*.
      Prediction based on kT factorization with gluon saturation. Fragmentation modelled using Peterson fragmentation function. 
- - **kt-linear-BLC**: *provided by Anna, Atri, Felix and Ina*.
+ - **kt: ANNA-linear-BLC**: *provided by Anna, Atri, Felix and Ina*.
      Prediction based on kT factorization without gluon saturation. Fragmentation modelled using Pythia with the BLC tune. 
- - **kt-saturation-BLC**: *provided by Anna, Atri, Felix and Ina*.
+ - **kt: ANNA-saturation-BLC**: *provided by Anna, Atri, Felix and Ina*.
      Prediction based on kT factorization with gluon saturation. Fragmentation modelled using Pythia with the BLC tune. 
      
-     
+ **NLO collinear factorization**
+ - **nlo: ATRI-FF**: *provided by Anna, Atri, Felix and Ina*.
+     NLO prediction obtained by Atri using the CT14 PDF, no kT smearing, $\mu_F=4.5 m_T$ and $\mu_R=1.5 m_T$. Fragmentation modelled using Peterson fragmentation function. 
+ - **nlo: ATRI-FF**: *provided by Anna, Atri, Felix and Ina*.
+     NLO prediction obtained by Atri using the CT14 PDF, no kT smearing, $\mu_F=4.5 m_T$ and $\mu_R=1.5 m_T$. Fragmentation modelled using Pythia with the BLC tune. 
