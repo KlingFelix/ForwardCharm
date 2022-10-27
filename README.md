@@ -9,13 +9,19 @@ This repository served two functions:
 Currently, we have the following predictions:
 
 **MC Generators: Hadronic Interaction Models**
- - **SIBYLL 2.3d**: as implemented in CRMC, see [arXiv:1806.04140](https://arxiv.org/abs/1806.04140)  *(provided by Felix)*
- - **DPMJET 3.2019**: as implemented in CRMC, see [GitHub](https://github.com/DPMJET/DPMJET) *(provided by Felix)*
- - **PYTHIA 8**: default setting using Monash tune, see [Manual](https://pythia.org/manuals/pythia8245/Welcome.html) *(provided by Felix)*
- - **PYTHIA 8-BLC**: beyond leading color hadronization tune, see [arXiv:1505.01681](https://arxiv.org/abs/1505.01681) *(provided by Felix)*
+ - **SIBYLL 2.3d**: *provided by Felix*
+     Dedicated Cosmic Ray MC generator, as implemented in CRMC. For a discussion of charm production, see [arXiv:1806.04140](https://arxiv.org/abs/1806.04140).  
+ - **DPMJET 3.2019**: *provided by Felix*
+     Dedicated Cosmic Ray MC generator, as implemented in CRMC. The code and references are available on [GitHub](https://github.com/DPMJET/DPMJET). This generator has not been tuned/validated for charm production.
+ - **PYTHIA 8**:  *provided by Felix*
+     Multi purpose MC generator, used to generate Minimum Bias events using the default setting (called the Monash tune). The code and references are available on this  [website](https://pythia.org/manuals/pythia8245/Welcome.html). This generator has not been tuned/validated for charm production.
+ - **PYTHIA 8-BLC**: *provided by Felix*
+     Multi purpose MC generator, used to generate Minimum Bias events using a modified modelling of fragmentation (called "String Formation Beyond Leading Colour"). A description of the model can be found in [arXiv:1505.01681](https://arxiv.org/abs/1505.01681). This generator has not been tuned/validated for charm production, but seems to describe the charm hadron flavor ratios better than the Monash tune.
  
  **MC Generators @ LO: Charm Production**
- - **PYTHIA 8**: default setting using Monash tune, see [Manual](https://pythia.org/manuals/pythia8245/Welcome.html) *(provided by Felix)*
- - **PYTHIA 8-BLC**: beyond leading color hadronization tune, see [arXiv:1505.01681](https://arxiv.org/abs/1505.01681) *(provided by Felix)*
- - **HERWIG 7**: defalt setting, see [Manual](https://herwig.hepforge.org/) *(provided by Peter)*
- 
+ - **PYTHIA 8**: *provided by Felix*
+     Multi purpose MC generator, used to generate charm events in the hard process  using Monash tune. 
+ - **PYTHIA 8-BLC**: *provided by Felix*
+     Multi purpose MC generator, used to generate charm events in the hard process  using "String Formation Beyond Leading Colour" tune.
+ - **HERWIG 7**: *provided by Peter*
+     Multi purpose MC generator, used to generate charm events in the hard process  using its default. See [Manual](https://herwig.hepforge.org/) for information. This generator has not been tuned/validated for charm production.
