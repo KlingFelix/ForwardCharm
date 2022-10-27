@@ -36,6 +36,17 @@ Currently, we have the following predictions:
  - **kt: ANNA-saturation-BLC**: *provided by Anna, Atri, Felix and Ina*.
      Prediction based on kT factorization with gluon saturation. Fragmentation modelled using Pythia with the BLC tune. 
      
+ - **kt: RAFAL-fullkt-MRW**: *provided by Rafal and Antoni*.
+     This is the prediction for the standard partonic production mechanism: $g*g* \to c \bar{c}$ obtained within the full kT-factorization approach with the Martin-Ryskin-Watt (MRW) unintegrated gluon (uPDFs). This result is dedicated to the LHCb charm data. See [arXiv: 2210.08890](https://arxiv.org/abs/2210.08890) for details.
+ - **kt: RAFAL-hyb-MRW**: *provided by Rafal and Antoni*.
+     This is a predcitons for the standard partonic production mechanism: $g*g* \to c \bar{c}$, obtained within the hybrid approach (the small-x gluon is off-shell and the large-x gluon is collinear) with the Martin-Ryskin-Watt (MRW) unintegrated gluons (uPDFs). This result are dedicated to the FPF neutrino flux calculations. See [arXiv: 2210.08890](https://arxiv.org/abs/2210.08890) for details.
+ - **kt: KT_RAFAL-hyb-KSlin**: *provided by Rafal and Antoni*.
+     Same as above, but with Kutak-Sapeta (KS-linear) unintegrated gluons (uPDFs). See [arXiv: 2210.08890](https://arxiv.org/abs/2210.08890) for details/
+ - **kt: RAFAL-hyb+IC-KSlin**: *provided by Rafal and Antoni*.
+     This is the prediction that includes intrinsic charm mechanism: $g*c \to g c$, obtained within the hybrid approach with the Kutak-Sapeta (KS-linear) unintegrated gluons (uPDFs) and the for the BHPS[1%] intrinsic charm distribution from the CT14nnloIC PDFs. See [arXiv: 2210.08890](https://arxiv.org/abs/2210.08890) for details.
+ - **kt: RAFAL-REC+IC-KSlin**: *provided by Rafal and Antoni*.
+    This is the prediction that includes the recombination mechanism: $qg \to Dc$, obtained within the hybrid approach with the Kutak-Sapeta (KS-linear) unintegrated gluons (uPDFs).  See [arXiv: 2210.08890](https://arxiv.org/abs/2210.08890) for details.
+     
  **NLO collinear factorization**
  - **nlo: ATRI-FF**: *provided by Anna, Atri, Felix and Ina*.
      NLO prediction obtained by Atri using the CT14 PDF, no kT smearing, $\mu_F=4.5 m_T$ and $\mu_R=1.5 m_T$. Fragmentation modelled using Peterson fragmentation function. 
