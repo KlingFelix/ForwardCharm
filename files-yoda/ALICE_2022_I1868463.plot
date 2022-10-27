@@ -27,7 +27,7 @@ LegendXPos=0.49
 END PLOT
 
 BEGIN PLOT /ALICE_2022_I1868463/d05-x01-y01
-Title=Average ratio of $\Lambda_c^+$ and $D^0$
+Title=ALICE 13 TeV $\Lambda_c^+$ / $D^0$
 XLabel=$p_T$ [GeV/$c$]
 YLabel=$\Lambda_c^+$/$D0$
 LegendXPos=0.49
