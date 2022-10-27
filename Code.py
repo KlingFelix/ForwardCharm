@@ -1416,29 +1416,45 @@ class Plotting():
         
         # predefined set
         customized='none'
-        if histograms=='summary':
-            histograms = [
-                ["LHCb_sum", "421"],
-                ["LHCb_sum", "411"],
-                #["LHCb_sum", "431"],
-                ["FLARE" , "12", 100],
-                ["FLARE_N" , "12", 100],
-            ]
+        
         if histograms=='use':
             customized='use'
             histograms = [
                 ["LHCb_sum", "421"],
-                ["FLARE" , "12", 100],
+                ["FLARE"   , "12", 100],
             ]
+            
+        if histograms=='summary':
+            histograms = [
+                ["LHCb_sum", "421"],
+                ["LHCb_sum", "411"],
+                ["FLARE"   , "12", 100],
+                ["FLARE_N" , "12", 100],
+            ]
+
+        if histograms=='details':
+            histograms = [
+                ["LHCb_sum", "421"],
+                ["LHCb_sum", "411"],
+                ["LHCb_sum", "431"],
+                ["flav_sum", "411"],
+                ["flav_sum", "431"],
+                ["flavor"  , "ALICE_2022_I1868463/d05-x01-y01"],
+                ["FLARE"   , "12", 100],
+                ["FLARE"   , "14", 100],
+                ["FLARE"   , "16", 100],
+            ]
+
         if histograms=='all':
             histograms = [
                 # pT histograms from LHCb analysis
-                ["LHCb_pt", "LHCB_2015_I1396331/d01-x01-y01"],
-                ["LHCb_pt", "LHCB_2015_I1396331/d01-x01-y03"],
-                ["LHCb_pt", "LHCB_2015_I1396331/d01-x01-y05"],
-                ["LHCb_pt", "LHCB_2015_I1396331/d03-x01-y01"],
-                ["LHCb_pt", "LHCB_2015_I1396331/d03-x01-y03"],
-                ["LHCb_pt", "LHCB_2015_I1396331/d03-x01-y05"],
+                ["LHCb_sum", "421"],
+                ["LHCb_sum", "411"],
+                ["LHCb_sum", "431"],
+                # flavor
+                ["flav_sum", "411"],
+                ["flav_sum", "431"],
+                ["flavor",  "ALICE_2022_I1868463/d05-x01-y01"],
                 # user defined pT histograms
                 ["pt"     , "411", 6, 6.5],
                 ["pt"     , "411", 7, 7.5],
@@ -1447,7 +1463,7 @@ class Plotting():
                 ["y"      , "411", 0, 0.5],
                 ["y"      , "411", 1, 1.5],
                 ["y"      , "411", 2, 2.5],
-                # neutrino flux rhrough FLARE
+                # neutrino flux through FLARE
                 ["FLARE"  , "12", 100],
                 ["FLARE"  , "14", 100],
                 ["FLARE"  , "16", 100],
@@ -1475,6 +1491,8 @@ class Plotting():
             if hist[0] == "FASERv_N":  self.plot_histos_faser(hist[1:], models, "FASERv", ax, interact=True)
             if hist[0] == "FLARE_N" :  self.plot_histos_faser(hist[1:], models, "FLARE", ax, interact=True)
             if hist[0] == "LHCb_sum":  self.plot_histos_summary_pt(hist[1], models, ax)
+            if hist[0] == "flavor"  :  self.plot_histos_exp_flavor(hist[1], models, ax)
+            if hist[0] == "flav_sum":  self.plot_histos_summary_flavor(hist[1], models, ax)
         
         # finish figure
         if customized=='use': plt.subplots_adjust(left=0.07, right=0.985, bottom=0.11, top=0.935)
@@ -1531,6 +1549,17 @@ class Plotting():
     # Get pT Histograms
     #***************************************
     
+    def make_line(self, xEdges, values):
+        xvals,yvals = [],[]
+        for x in xEdges:
+            xvals.append(x)
+            xvals.append(x)
+        for w in values:
+            yvals.append(w)
+            yvals.append(w)
+        return xvals[1:-1], yvals
+    
+    
     def plot_histos_summary_pt(self, particle, models, ax):
         
         # define LHCb analyses
@@ -1571,6 +1600,94 @@ class Plotting():
         if particle == "411": ax.set_xlim(1,15)
         if particle == "431": ax.set_xlim(1,14)
         ax.set_ylim(1e-2, 1e3)
+        ax.legend(frameon=False,labelspacing=0)
+        
+    def plot_histos_summary_flavor(self, particle, models, ax):
+        
+        # define LHCb analyses
+        labels = {"421":"$D_0 \\to K^-\pi^+$", "411":"$D^+ \\to K^-\pi^+ \pi^+$", "431":"$D_s^+ \\to [K^+ K^0]_\phi \pi^+$"}
+        ids_lhcb_13 = {"411":"09", "431":"10"}
+        factors_13 = {"411":0.0938*100/0.03947, "431":0.045*100/0.03947}
+        histograms = ["LHCB_2015_I1396331/d"+ids_lhcb_13[particle]+"-x01-y0"+str(j) for j in [1,3,5]]
+        factors = {"411":0.0938*100/0.03947, "431":0.045*100/0.03947}
+        perdy, onlyplus, factor = True,  False, 1.
+        
+        # loop over analysis
+        for ihist, hist in enumerate(histograms):
+            id_rapidity = int(hist.split("/")[1][10])
+            pid=particle
+            ymin, ymax = 1.5+id_rapidity*0.5, 2.0+id_rapidity*0.5
+            correction = 5**(-ihist)
+        
+            # add data
+            analysis = hist[:-12]
+            histogram = hist[-11:]
+            xVals, yVals, xErrs, yErrs, xEdges = self.add_data(ax, analysis=analysis,histogram=histogram, factor=correction)
+        
+            # add simulation
+            for sample, label, col, ls, lw in models:
+                values1 = np.array(self.get_ptbins_from_simuation(sample, pid  , xVals, xErrs, ymin, ymax, perdy, onlyplus, factors[pid]*correction))
+                values0 = np.array(self.get_ptbins_from_simuation(sample, "421", xVals, xErrs, ymin, ymax, perdy, onlyplus, factor=1))
+                values = values1.T[1]/values0.T[1]
+                xvals,yvals =  self.make_line(xEdges, values)
+                #ax.hist(values1.T[0], weights=weights, bins=xEdges, histtype='step', color=col, ls=ls)
+                ax.plot(xvals, yvals, color=col, ls=ls,lw=1)
+                if ihist>0: label=None
+                ax.plot([-1,-1], [0,0], label=label, color=col, ls=ls)
+        
+        # finish plot
+        #if particle=="411": ax.text(14.8 , 0.35 , "$2<\eta<2.5$", color="k", ha="right", va="top"   ,fontsize=14)
+        #if particle=="411": ax.text(14.8 , 0.012, "$3<\eta<3.5$", color="k", ha="right", va="bottom",fontsize=14)
+        #if particle=="411": ax.text(6.25 , 0.012, "$4<\eta<4.5$", color="k", ha="right", va="bottom",fontsize=14)
+        ax.set_title(r"LHCb 13 TeV: "+labels[particle]+"/"+labels["421"])
+        ax.set_xlabel(r"$p_T$ [GeV]")
+        ax.set_ylabel(r"Cross Section Ratio [%]")
+        ax.set_yscale("log")
+        ax.set_xlim(0,15)
+        if particle=="411": ax.set_ylim(2, 300)
+        if particle=="431": ax.set_ylim(0.1,50)
+        ax.legend(frameon=False,labelspacing=0)
+        
+    def plot_histos_exp_flavor(self, hist, models, ax):
+        
+        #check if LHCb analysis:
+        pids_lhcb_13 = {"09":"411", "10": "431"}
+        histograms_lhcb_13 = ["LHCB_2015_I1396331/d"+i+"-x01-y0"+str(j) for i in ["09","10"] for j in range(1,6)]
+        #check if ALICE analysis:
+        pids_alice_13 = {"05":"4122"}
+        histograms_alice_13 = ["ALICE_2022_I1868463/d05-x01-y01"]
+
+        id_particle, id_rapidity = hist.split("/")[1][1:3], int(hist.split("/")[1][10])
+        if   hist in histograms_lhcb_13:
+            pid = pids_lhcb_13[id_particle]
+            factors = {"411":0.0938*100/0.03947, "431":0.045*100/0.03947}
+            perdy, onlyplus, factor =  True, False, 1.
+        elif hist in histograms_alice_13:
+            pid = pids_alice_13[id_particle]
+            factors = {"4122":1}
+            perdy, onlyplus, factor =  True, False, 1.
+        else: return
+
+        if   hist in histograms_lhcb_13: ymin, ymax = 1.5+id_rapidity*0.5, 2.0+id_rapidity*0.5
+        elif hist in histograms_alice_13: ymin, ymax = 0, 0.5
+        else: return
+        
+        # add data
+        analysis = hist[:-12]
+        histogram = hist[-11:]
+        xVals, yVals, xErrs, yErrs, xEdges = self.add_data(ax, analysis=analysis,histogram=histogram)
+        
+        # add simulation
+        for sample, label, col, ls, lw in models:
+            values1 = np.array(self.get_ptbins_from_simuation(sample, pid  , xVals, xErrs, ymin, ymax, perdy, onlyplus, factors[pid]))
+            values0 = np.array(self.get_ptbins_from_simuation(sample, "421", xVals, xErrs, ymin, ymax, perdy, onlyplus, factor=1))
+            ax.hist(values1.T[0], weights=values1.T[1]/values0.T[1], bins=xEdges, histtype='step', color=col, ls=ls)
+            ax.plot([-1,-1], [0,0], label=label, color=col, ls=ls)
+        
+        # finish plot
+        ax.set_xlim(xEdges[0], xEdges[-1])
+#        ax.set_ylim(0, 2)
+        self. add_plotkey(hist, ax)
         ax.legend(frameon=False,labelspacing=0)
             
     def plot_histos_exp_pt(self, hist, models, ax):
@@ -1731,7 +1848,7 @@ class Plotting():
         elif experiment=="FASERv" and pid == "14": pids, ylims, ylimsint, pidstr = [14,-14], [3e2,3e6], [1e+0,3e3], r"$\nu_\mu + \bar\nu_\mu$"
         elif experiment=="FASERv" and pid == "16": pids, ylims, ylimsint, pidstr = [16,-16], [3e1,3e5], [1e-1,1e2], r"$\nu_\tau + \bar\nu_\tau$"
         elif experiment=="FLARE"  and pid == "12": pids, ylims, ylimsint, pidstr = [12,-12], [2e3,2e7], [3e+1,1e5], r"$\nu_e + \bar\nu_e$"
-        elif experiment=="FLARE"  and pid == "14": pids, ylims, ylimsint, pidstr = [14,-14], [2e3,2e7], [3e+1,1e5], r"$\nu_\mu + \bar\nu_\mu$"
+        elif experiment=="FLARE"  and pid == "14": pids, ylims, ylimsint, pidstr = [14,-14], [2e3,2e7], [1e+2,3e5], r"$\nu_\mu + \bar\nu_\mu$"
         elif experiment=="FLARE"  and pid == "16": pids, ylims, ylimsint, pidstr = [16,-16], [2e2,2e6], [1e+0,1e4], r"$\nu_\tau + \bar\nu_\tau$"
         else: print ("Input wrong:", pid)
         if experiment=="FASERv": posxmin, posxmax, posymin, posymax, zloc, lumi = -0.125, 0.125, -0.125, 0.125, 480., 150*1000.
