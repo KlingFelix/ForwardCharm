@@ -1910,5 +1910,6 @@ class Plotting():
         else: ax.set_ylabel(r"Neutrinos [pb/bin]")
         ax.set_title(experiment+" 13 TeV: " +pidstr)
         if interact: ax.legend(frameon=False,labelspacing=0, loc="upper left")
+        elif len(models)>10: ax.legend(frameon=False,labelspacing=0, loc="upper left", bbox_to_anchor=(1.1, 1))
         else: ax.legend(frameon=False,labelspacing=0, loc="lower left")
    
