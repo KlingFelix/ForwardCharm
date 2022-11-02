@@ -275,7 +275,8 @@ class Decays():
         return output
     
     
-    def get_neutrinos(self, model, pid, posxmin, posxmax, posymin, posymax, zloc, nsample, conversion=1):
+#    def get_neutrinos(self, model, pid, posxmin, posxmax, posymin, posymax, zloc, nsample, conversion=1):
+    def get_neutrinos(self, model, pid, condition, zloc, nsample, conversion=1):
         
         # initiate
         values = []
@@ -320,8 +321,9 @@ class Decays():
                     nus = self.get_neutrino(hpid, pid, phad, zloc, nsample=usensample)
                     # check if neutrinos in range, then fill energy in histogram
                     for en,posx,posy in nus:
-                        if posx<posxmin or posx>posxmax: continue
-                        if posy<posymin or posy>posymax: continue
+                        if eval(condition)==False:continue
+                        #if posx<posxmin or posx>posxmax: continue
+                        #if posy<posymin or posy>posymax: continue
                         if en<10: continue
                         values.append([en,xs*br/float(nsample)])
                         statsy.append(y)
@@ -332,8 +334,11 @@ class Decays():
     
         for setup in setups:
             #define geometry
-            if setup=="FASERv": posxmin, posxmax, posymin, posymax, zloc = -0.125, 0.125, -0.125, 0.125, 480.
-            if setup=="FLARE" : posxmin, posxmax, posymin, posymax, zloc = -0.5, 0.5, -0.5, 0.5, 620.
+            #if setup=="FASERv": posxmin, posxmax, posymin, posymax, zloc = -0.125, 0.125, -0.125, 0.125, 480.
+            #if setup=="FLARE" : posxmin, posxmax, posymin, posymax, zloc = -0.5, 0.5, -0.5, 0.5, 620.
+            if setup=="FASERv": condition, zloc = "abs(posx)<0.125 and abs(posy)<0.125", 480.
+            if setup=="FLARE" : condition, zloc = "abs(posx)<0.5 and abs(posy)<0.5", 620.
+            if setup=="eta85" : condition, zloc = "posx**2+posy**2<0.2**2", 480.
             
             # define histogram
             emin, emax, ne,  = 1, 4, 30
@@ -343,7 +348,8 @@ class Decays():
             #loop over neutrinos
             for pid in [12,14,16,-12,-14,-16]:
                 # get neutrinos
-                values = self.get_neutrinos(model, pid, posxmin, posxmax, posymin, posymax, zloc, nsample=nsample)
+                #values = self.get_neutrinos(model, pid, posxmin, posxmax, posymin, posymax, zloc, nsample=nsample)
+                values = self.get_neutrinos(model, pid, condition, zloc, nsample=nsample)
                 # feed into histogram
                 weights, _ = np.histogram(values.T[0], weights=values.T[1],  bins=xEdges)
                 # save to file
@@ -1486,6 +1492,7 @@ class Plotting():
             if hist[0] == "LHCb_pt" :  self.plot_histos_exp_pt(hist[1], models, ax)
             if hist[0] == "pt"      :  self.plot_histos_pt(hist[1:], models, ax)
             if hist[0] == "y"       :  self.plot_histos_y(hist[1:], models, ax)
+            if hist[0] == "eta85"   :  self.plot_histos_faser(hist[1:], models, "eta85", ax, interact=False)
             if hist[0] == "FASERv"  :  self.plot_histos_faser(hist[1:], models, "FASERv", ax, interact=False)
             if hist[0] == "FLARE"   :  self.plot_histos_faser(hist[1:], models, "FLARE", ax, interact=False)
             if hist[0] == "FASERv_N":  self.plot_histos_faser(hist[1:], models, "FASERv", ax, interact=True)
@@ -1752,7 +1759,8 @@ class Plotting():
         ax.set_xlim(xEdges[0], xEdges[-1])
         ax.set_ylim(2e-1, 5e2)
         self. add_plotkey(hist, ax)
-        ax.legend(frameon=False,labelspacing=0)
+        if len(models)>10: ax.legend(frameon=False,labelspacing=0, loc="upper left", bbox_to_anchor=(1.1, 1))
+        else: ax.legend(frameon=False,labelspacing=0)
 
     def plot_histos_pt(self, hist, models, ax):
     
@@ -1770,7 +1778,7 @@ class Plotting():
         # add simulation
         for sample, label, col, ls, lw in models:
             values = np.array(self.get_ptbins_from_simuation(sample, pid, xVals, xErrs, ymin, ymax))
-            ax.hist(values.T[0], weights=values.T[1], bins=xEdges, histtype='step', color=col, ls=ls)
+            ax.hist(values.T[0], weights=values.T[1]*1e-6, bins=xEdges, histtype='step', color=col, ls=ls)
             ax.plot([-1,-1], [0,0], label=label, color=col, ls=ls)
 
         # finish plot
@@ -1801,12 +1809,12 @@ class Plotting():
         # add simulation
         for sample, label, col, ls, lw in models:
             values = np.array(self.get_ybins_from_simuation(sample, pid, xVals, xErrs, ptmin, ptmax))
-            ax.hist(values.T[0], weights=values.T[1], bins=xEdges, histtype='step', color=col, ls=ls)
+            ax.hist(values.T[0], weights=values.T[1]*1e-6, bins=xEdges, histtype='step', color=col, ls=ls)
             ax.plot([-1,-1], [0,0], label=label, color=col, ls=ls)
 
         # finish plot
         ax.set_xlim(xEdges[0], xEdges[-1])
-        ax.set_ylim(5e4, 5e8)
+        ax.set_ylim(5e-2, 5e2)
         ax.set_yscale("log")
         ax.set_xlabel(r"Rapidity $y$")
         ax.set_ylabel(r"$d\sigma/dp_Tdy$ [$\mu$b/GeV]")
@@ -1849,12 +1857,16 @@ class Plotting():
         if   experiment=="FASERv" and pid == "12": pids, ylims, ylimsint, pidstr = [12,-12], [3e2,3e6], [1e+0,3e3], r"$\nu_e + \bar\nu_e$"
         elif experiment=="FASERv" and pid == "14": pids, ylims, ylimsint, pidstr = [14,-14], [3e2,3e6], [1e+0,3e3], r"$\nu_\mu + \bar\nu_\mu$"
         elif experiment=="FASERv" and pid == "16": pids, ylims, ylimsint, pidstr = [16,-16], [3e1,3e5], [1e-1,1e2], r"$\nu_\tau + \bar\nu_\tau$"
+        elif experiment=="eta85"  and pid == "12": pids, ylims, ylimsint, pidstr = [12,-12], [3e2,3e6], [1e+0,3e3], r"$\nu_e + \bar\nu_e$"
+        elif experiment=="eta85"  and pid == "14": pids, ylims, ylimsint, pidstr = [14,-14], [3e2,3e6], [1e+0,3e3], r"$\nu_\mu + \bar\nu_\mu$"
+        elif experiment=="eta85"  and pid == "16": pids, ylims, ylimsint, pidstr = [16,-16], [3e1,3e5], [1e-1,1e2], r"$\nu_\tau + \bar\nu_\tau$"
         elif experiment=="FLARE"  and pid == "12": pids, ylims, ylimsint, pidstr = [12,-12], [2e3,2e7], [3e+1,1e5], r"$\nu_e + \bar\nu_e$"
         elif experiment=="FLARE"  and pid == "14": pids, ylims, ylimsint, pidstr = [14,-14], [2e3,2e7], [1e+2,3e5], r"$\nu_\mu + \bar\nu_\mu$"
         elif experiment=="FLARE"  and pid == "16": pids, ylims, ylimsint, pidstr = [16,-16], [2e2,2e6], [1e+0,1e4], r"$\nu_\tau + \bar\nu_\tau$"
         else: print ("Input wrong:", pid)
-        if experiment=="FASERv": posxmin, posxmax, posymin, posymax, zloc, lumi = -0.125, 0.125, -0.125, 0.125, 480., 150*1000.
-        if experiment=="FLARE" : posxmin, posxmax, posymin, posymax, zloc, lumi = -0.5  , 0.5  , -0.5  , 0.5  , 620., 3000*1000.
+        if experiment=="eta85" : experimentL, zloc, lumi = "FASERv", 480., 150*1000.
+        if experiment=="FASERv": experimentL, zloc, lumi = "FASERv", 480., 150*1000.
+        if experiment=="FLARE" : experimentL, zloc, lumi = "FLARE" , 620., 3000*1000.
         emin, emax, ne,  = 1, 4, 30
         xEdges = np.logspace(emin, emax, ne+1)
         
@@ -1867,13 +1879,13 @@ class Plotting():
         alllight=True
         if pid!="16" and alllight==False:
             for gen in ["E"]:
-                data = self.nulight[experiment+"_"+pid+"_"+gen]
+                data = self.nulight[experimentL+"_"+pid+"_"+gen]
                 ax.hist(data[0], weights=data[1+interact], bins=xEdges, histtype='step', color=col_lgt, lw=2, ls="solid")
                 
         if pid!="16" and alllight==True:
             datas = []
             for gen in ["S","D","Q","E"]:
-                data = self.nulight[experiment+"_"+pid+"_"+gen]
+                data = self.nulight[experimentL+"_"+pid+"_"+gen]
                 energies,entries = data[0], data[1+interact]
                 datas.append(entries)
             datas = np.array(datas)
