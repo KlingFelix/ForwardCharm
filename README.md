@@ -53,4 +53,4 @@ Currently, we have the following predictions:
  - **nlo: ATRI-FF**: *provided by Anna, Atri, Felix and Ina*.
      NLO prediction obtained by Atri using the CT14 PDF, no kT smearing, $\mu_F=4.5 m_T$ and $\mu_R=1.5 m_T$. Fragmentation modelled using Pythia with the BLC tune. 
  - **nlo: YUSEON**: *provided by Yu-Seon, Weidong and Hallsie*.
-     NLO prediction obtained by Yu-Seon. Fragmentation modelled using Peterson fragmentation function. 
+     NLO prediction obtained by Yu-Seon usung the PROSA FFNS PDF, (mu_R, mu_F) = (0.72, 1.06) m_T and <k_T> = 1.32 GeV. Fragmentation is modelled using Peterson fragmentation function.  
