@@ -253,7 +253,7 @@ class Decays():
     # Get Neutrino Flux Histograms
     #***************************************
     
-    def get_neutrino(self, hpid, vpid, phad, zloc, nsample=10):
+    def get_neutrino(self, hpid, vpid, phad, nsample=10):
         output=[]
         apid, sign = abs(hpid), hpid/abs(hpid)
         label = str(abs(apid))+"_"+str(int(sign*vpid))
@@ -271,7 +271,7 @@ class Decays():
             #boost in lab frame
             p=pnu.boost(-1.*phad.boostvector)
             #get coordinates
-            output.append([p.e, p.x/p.z*zloc,p.y/p.z*zloc])
+            output.append(p)
         return output
     
     
@@ -286,7 +286,6 @@ class Decays():
         ymin, ymax, ny = 5,9,40
         dy = (ymax-ymin)/float(ny)
         
-        statsy, statspt = [], []
         #loop over hadrons
         for hpid in [-411, -421, -431, -4122, 411, 421, 431, 4122]:
             #get mesons
@@ -318,16 +317,13 @@ class Decays():
                     phad = LorentzVector(px,py,pz,en)
                     
                     # get neutrinos
-                    nus = self.get_neutrino(hpid, pid, phad, zloc, nsample=usensample)
+                    pnus = self.get_neutrino(hpid, pid, phad, nsample=usensample)
                     # check if neutrinos in range, then fill energy in histogram
-                    for en,posx,posy in nus:
+                    for p in pnus:
+                        en, posx, posy = p.e, p.x/p.z*zloc,p.y/p.z*zloc
                         if eval(condition)==False:continue
-                        #if posx<posxmin or posx>posxmax: continue
-                        #if posy<posymin or posy>posymax: continue
                         if en<10: continue
-                        values.append([en,xs*br/float(nsample)])
-                        statsy.append(y)
-                        statspt.append(pt)
+                        values.append([p,xs*br/float(nsample),hpid])
         return np.array(values)
 
     def do_decay(self, model, nsample=25, setups=["FLARE"]):
@@ -351,13 +347,41 @@ class Decays():
                 #values = self.get_neutrinos(model, pid, posxmin, posxmax, posymin, posymax, zloc, nsample=nsample)
                 values = self.get_neutrinos(model, pid, condition, zloc, nsample=nsample)
                 # feed into histogram
-                weights, _ = np.histogram(values.T[0], weights=values.T[1],  bins=xEdges)
+                weights, _ = np.histogram([p.e for p in values.T[0]], weights=values.T[1],  bins=xEdges)
                 # save to file
                 dataname = "files/"+model+"/"+model+"_"+setup+"_"+str(pid)+".txt"
                 datafile = open(dataname,"w")
                 for p,w in zip(xCenters,weights):
                     datafile.write(str(p)+" "+str(w)+"\n")
                 datafile.close()
+                
+    def do_decay_event(self, model, nsample=25, condition="abs(posx)<0.5 and abs(posy)<0.5"):
+    
+        # define setup
+        zloc=480
+        
+        #open file
+        dataname = "events/LHC13_"+model+"_charm_0.txt"
+        datafile = open(dataname,"w")
+    
+        #loop over neutrinos
+        for pid in [12,14,16,-12,-14,-16]:
+            # get neutrinos
+            values = self.get_neutrinos(model, pid, condition, zloc, nsample=nsample)
+            # save to file
+            for p,w,hpid in values:
+                datafile.write(str(pid)+" ")
+                datafile.write(str(hpid)+" ")
+                datafile.write(str(round(p.x/p.z*zloc,3))+" ")
+                datafile.write(str(round(p.y/p.z*zloc,3))+" ")
+                datafile.write("0 ")
+                datafile.write('{:.4e}'.format(p.x/p.z)+" ")
+                datafile.write('{:.4e}'.format(p.y/p.z)+" ")
+                datafile.write('{:.2e}'.format(p.e)+" ")
+                datafile.write('{:.3e}'.format(w)+"\n")
+                
+        #close file
+        datafile.close()
 
 
 ########################################################
@@ -1894,6 +1918,13 @@ class Plotting():
             ax.hist(energies, weights=data.T[1], bins=xEdges, histtype='bar', color='white', lw=1)
             ax.hist(energies, weights=data.T[0], bins=xEdges, histtype='step', color=col_lgt, lw=2)
             
+        if False:
+            for gen in ["S"]:
+                data = self.nulight[experimentL+"_"+pid+"_"+gen]
+                ax.hist(data[0], weights=data[1+interact], bins=xEdges, histtype='step', color='red', lw=2, ls="solid")
+                print(experimentL+"_"+pid+"_"+gen, data[1+interact])
+                
+                
         if pid=="12" and experiment=="FASERv" and interact==False: ax.text(60, 1e5, "$\pi K \Lambda$", color=col_lgt, ha="left")
         if pid=="12" and experiment=="FASERv" and interact==True: ax.text(60, 1e1, "$\pi K \Lambda$", color=col_lgt, ha="left")
         if pid=="12" and experiment=="FLARE" and interact==False: ax.text(60, 1e6, "$\pi K \Lambda$", color=col_lgt, ha="left")
