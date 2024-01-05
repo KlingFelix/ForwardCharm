@@ -293,7 +293,7 @@ class Decays():
             f = read_and_interpolate2d(datafile, conversion=conversion)
             #nsample
             usensample=nsample
-            if pid in [431,-431] and pid in [16,-16]: usensample=nsample*10
+            if pid in [431,-431] and pid in [16,-16]: usensample=nsample*100
             #get BR
             br = self.decay_br[hpid][pid]
             if br<=0: continue
@@ -1442,11 +1442,19 @@ class Plotting():
     # Main Plotting Fuction
     #***************************************
     
-    def plot_histos(self, histograms, models, filename=None, ncols=3, do_show=True):
+    def plot_histos(self, histograms, models, filename=None, ncols=3, do_show=True, figsize=None):
         
         # predefined set
         customized='none'
         
+        if histograms=='faserv':
+            customized='faserv'
+            histograms = [
+                ["FASERv_N", "12", 100],
+                #["FASERv_N", "14", 100],
+                #["FASERv_N", "16", 100],
+            ]
+            
         if histograms=='use':
             customized='use'
             histograms = [
@@ -1504,11 +1512,12 @@ class Plotting():
             ]
             
         # setup figure
-        matplotlib.rcParams.update({'font.size': 17})
-        matplotlib.rcParams['text.usetex'] = False
+        matplotlib.rcParams.update({'font.size': 15})
+        #matplotlib.rcParams['text.usetex'] = False
         nrows = int(len(histograms)/ncols) #+ 1
         if len(histograms)%ncols>0: nrows+=1
-        fig = plt.figure(figsize=(ncols*8,6*nrows))
+        if figsize is None: figsize = (ncols*7,5*nrows)
+        fig = plt.figure(figsize=figsize)
         
         # loop over histograms
         for ihist,hist in enumerate(histograms):
@@ -1527,6 +1536,7 @@ class Plotting():
         
         # finish figure
         if customized=='use': plt.subplots_adjust(left=0.07, right=0.985, bottom=0.11, top=0.935)
+        elif customized=='faserv': plt.subplots_adjust(left=0.135, right=0.975, bottom=0.12, top=0.975)
         else: plt.tight_layout()
         if filename is not None: fig.savefig(filename)
         if do_show: plt.show()
@@ -1613,11 +1623,20 @@ class Plotting():
             xVals, yVals, xErrs, yErrs, xEdges = self.add_data(ax, analysis=analysis,histogram=histogram, factor=correction)
         
             # add simulation
+            predictions={}
             for sample, label, col, ls, lw in models:
                 values = np.array(self.get_ptbins_from_simuation(sample, pid, xVals, xErrs, ymin, ymax, perdy, onlyplus, factor=correction))
-                if ihist>0: label=None
-                ax.hist(values.T[0], weights=values.T[1]*1e-6, bins=xEdges, histtype='step', color=col, ls=ls)
-                ax.plot([-1,-1], [0,0], label=label, color=col, ls=ls)
+                if ls in ['min','max']:
+                    dat,_=np.histogram(values.T[0], weights=values.T[1]*1e-6, bins=xEdges)
+                    dat = np.append(dat, [-1])
+                    predictions[ls] = dat
+                else:
+                    if len(predictions.keys()) > 0:
+                        ax.fill_between(xEdges, predictions['min'], predictions['max'], step='post', color=col, alpha=0.25)
+                        predictions={}
+                    if ihist>0: label=None
+                    ax.hist(values.T[0], weights=values.T[1]*1e-6, bins=xEdges, histtype='step', color=col, ls=ls, lw=lw)
+                    ax.plot([-1,-1], [0,0], label=label, color=col, ls=ls, lw=lw)
         
         # finish plot
         if particle=="421": ax.text(14.8 , 0.35 , "$2<\eta<2.5$", color="k", ha="right", va="top"   ,fontsize=14)
@@ -1631,7 +1650,7 @@ class Plotting():
         if particle == "411": ax.set_xlim(1,15)
         if particle == "431": ax.set_xlim(1,14)
         ax.set_ylim(1e-2, 1e3)
-        ax.legend(frameon=False,labelspacing=0)
+        ax.legend(frameon=False,labelspacing=0, fontsize=12)
         
     def plot_histos_summary_flavor(self, particle, models, ax):
         
@@ -1656,15 +1675,22 @@ class Plotting():
             xVals, yVals, xErrs, yErrs, xEdges = self.add_data(ax, analysis=analysis,histogram=histogram, factor=correction)
         
             # add simulation
+            predictions={}
             for sample, label, col, ls, lw in models:
                 values1 = np.array(self.get_ptbins_from_simuation(sample, pid  , xVals, xErrs, ymin, ymax, perdy, onlyplus, factors[pid]*correction))
                 values0 = np.array(self.get_ptbins_from_simuation(sample, "421", xVals, xErrs, ymin, ymax, perdy, onlyplus, factor=1))
                 values = values1.T[1]/values0.T[1]
                 xvals,yvals =  self.make_line(xEdges, values)
-                #ax.hist(values1.T[0], weights=weights, bins=xEdges, histtype='step', color=col, ls=ls)
-                ax.plot(xvals, yvals, color=col, ls=ls,lw=1)
-                if ihist>0: label=None
-                ax.plot([-1,-1], [0,0], label=label, color=col, ls=ls)
+                if ls in ['min','max']:
+                    predictions[ls] = yvals
+                else:
+                    if len(predictions.keys()) > 0:
+                        ax.fill_between(xvals, predictions['min'], predictions['max'], step='post', color=col, alpha=0.25)
+                        predictions={}
+                    ax.plot(xvals, yvals, color=col, ls=ls, lw=lw)
+                    if ihist>0: label=None
+                    ax.plot([-1,-1], [0,0], label=label, color=col, ls=ls, lw=lw)
+        
         
         # finish plot
         #if particle=="411": ax.text(14.8 , 0.35 , "$2<\eta<2.5$", color="k", ha="right", va="top"   ,fontsize=14)
@@ -1710,12 +1736,21 @@ class Plotting():
         
         
         # add simulation
+        predictions={}
         for sample, label, col, ls, lw in models:
             values1 = np.array(self.get_ptbins_from_simuation(sample, pid  , xVals, xErrs, ymin, ymax, perdy, onlyplus, factors[pid]))
             values0 = np.array(self.get_ptbins_from_simuation(sample, "421", xVals, xErrs, ymin, ymax, perdy, onlyplus, factor=1))
             values = [0 if v1*v2==0 else v1/v2 for v1,v2 in zip(values1.T[1],values0.T[1])]
-            ax.hist(values1.T[0], weights=values, bins=xEdges, histtype='step', color=col, ls=ls)
-            ax.plot([-1,-1], [0,0], label=label, color=col, ls=ls)
+            if ls in ['min','max']:
+                dat,_=np.histogram(values1.T[0], weights=values, bins=xEdges)
+                predictions[ls] = dat
+            else:
+                if len(predictions.keys()) > 0:
+                    ax.fill_between(xEdges[:-1], predictions['min'], predictions['max'], step='post', color=col, alpha=0.25)
+                    predictions={}
+                ax.hist(values1.T[0], weights=values, bins=xEdges, histtype='step', color=col, ls=ls, lw=lw)
+                ax.plot([-1,-1], [0,0], label=label, color=col, ls=ls, lw=lw)
+        
         
         # finish plot
         ax.set_xlim(xEdges[0], xEdges[-1])
@@ -1726,6 +1761,8 @@ class Plotting():
     def plot_histos_exp_pt(self, hist, models, ax):
         
         #check if LHCb analysis:
+        pids_lhcb_B13 = {1:"521"}
+        histograms_lhcb_B13 = ["LHCB_2017_I1630633/d0"+str(i)+"-x01-y0"+str(j) for i in [1] for j in range(1,6)]
         pids_lhcb_13 = {1:"421", 2: "411", 3: "431"}
         histograms_lhcb_13 = ["LHCB_2015_I1396331/d0"+str(i)+"-x01-y0"+str(j) for i in [1,2,3] for j in range(1,6)]
         pids_lhcb_7 = {2:"421", 3: "411", 5: "431"}
@@ -1758,14 +1795,18 @@ class Plotting():
         elif hist in histograms_atlas_7:
             pid = pids_atlas_7[id_particle]
             perdy, onlyplus, factor = False,  False, 2.
+        elif hist in histograms_lhcb_B13 :
+            pid = pids_lhcb_B13[id_particle]
+            perdy, onlyplus, factor = True,  False, 1000.
         else: return
 
-        if   hist in histograms_lhcb_13: ymin, ymax = 1.5+id_rapidity*0.5, 2.0+id_rapidity*0.5
-        elif hist in histograms_lhcb_7 : ymin, ymax = 1.5+id_rapidity*0.5, 2.0+id_rapidity*0.5
-        elif hist in histograms_lhcb_5 : ymin, ymax = 1.5+id_rapidity*0.5, 2.0+id_rapidity*0.5
-        elif hist in histograms_alice_7: ymin, ymax = 0, 0.5
-        elif hist in histograms_alice_5: ymin, ymax = 0, 0.5
-        elif hist in histograms_atlas_7: ymin, ymax = 0, 2.1
+        if   hist in histograms_lhcb_13 : ymin, ymax = 1.5+id_rapidity*0.5, 2.0+id_rapidity*0.5
+        elif hist in histograms_lhcb_7  : ymin, ymax = 1.5+id_rapidity*0.5, 2.0+id_rapidity*0.5
+        elif hist in histograms_lhcb_5  : ymin, ymax = 1.5+id_rapidity*0.5, 2.0+id_rapidity*0.5
+        elif hist in histograms_alice_7 : ymin, ymax = 0, 0.5
+        elif hist in histograms_alice_5 : ymin, ymax = 0, 0.5
+        elif hist in histograms_atlas_7 : ymin, ymax = 0, 2.1
+        elif hist in histograms_lhcb_B13: ymin, ymax = 1.5+id_rapidity*0.5, 2.0+id_rapidity*0.5
         else: return
         
         # add data
@@ -1773,15 +1814,25 @@ class Plotting():
         histogram = hist[-11:]
         xVals, yVals, xErrs, yErrs, xEdges = self.add_data(ax, analysis=analysis,histogram=histogram)
         
-        # add simulation
+                # add simulation
+        predictions={}
         for sample, label, col, ls, lw in models:
             values = np.array(self.get_ptbins_from_simuation(sample, pid, xVals, xErrs, ymin, ymax, perdy, onlyplus, factor))
-            ax.hist(values.T[0], weights=values.T[1]*1e-6, bins=xEdges, histtype='step', color=col, ls=ls)
-            ax.plot([-1,-1], [0,0], label=label, color=col, ls=ls)
+            if ls in ['min','max']:
+                dat,_=np.histogram(values.T[0], weights=values.T[1]*1e-6, bins=xEdges)
+                dat = np.append(dat, [-1])
+                predictions[ls] = dat
+            else:
+                if len(predictions.keys()) > 0:
+                    ax.fill_between(xEdges, predictions['min'], predictions['max'], step='post', color=col, alpha=0.25)
+                    predictions={}
+                ax.hist(values.T[0], weights=values.T[1]*1e-6, bins=xEdges, histtype='step', color=col, ls=ls, lw=lw)
+                ax.plot([-1,-1], [0,0], label=label, color=col, ls=ls, lw=lw)
         
         # finish plot
         ax.set_xlim(xEdges[0], xEdges[-1])
-        ax.set_ylim(2e-1, 5e2)
+        if hist in histograms_lhcb_B13: ax.set_ylim(3e-0, 1e4)
+        else: ax.set_ylim(2e-1, 5e2)
         self. add_plotkey(hist, ax)
         if len(models)>10: ax.legend(frameon=False,labelspacing=0, loc="upper left", bbox_to_anchor=(1.1, 1))
         else: ax.legend(frameon=False,labelspacing=0)
@@ -1878,7 +1929,7 @@ class Plotting():
         
         #extract boundaries
         pid, nsample = hist
-        if   experiment=="FASERv" and pid == "12": pids, ylims, ylimsint, pidstr = [12,-12], [3e2,3e6], [1e+0,3e3], r"$\nu_e + \bar\nu_e$"
+        if   experiment=="FASERv" and pid == "12": pids, ylims, ylimsint, pidstr = [12,-12], [3e2,3e6], [1e+0,1e3], r"$\nu_e + \bar\nu_e$"
         elif experiment=="FASERv" and pid == "14": pids, ylims, ylimsint, pidstr = [14,-14], [3e2,3e6], [1e+0,3e3], r"$\nu_\mu + \bar\nu_\mu$"
         elif experiment=="FASERv" and pid == "16": pids, ylims, ylimsint, pidstr = [16,-16], [3e1,3e5], [1e-1,1e2], r"$\nu_\tau + \bar\nu_\tau$"
         elif experiment=="eta85"  and pid == "12": pids, ylims, ylimsint, pidstr = [12,-12], [3e2,3e6], [1e+0,3e3], r"$\nu_e + \bar\nu_e$"
@@ -1899,29 +1950,31 @@ class Plotting():
         #    data = self.nucharm[experiment+"_"+pid+"_"+gen]
         #    ax.hist(data[0], weights=data[1+interact], bins=xEdges, histtype='step', color=col_hvy, ls=ls)
         
+        scalefac=200/150.
         #add neutrinos from light mesons
         alllight=True
         if pid!="16" and alllight==False:
             for gen in ["E"]:
                 data = self.nulight[experimentL+"_"+pid+"_"+gen]
-                ax.hist(data[0], weights=data[1+interact], bins=xEdges, histtype='step', color=col_lgt, lw=2, ls="solid")
+                ax.hist(data[0], weights=data[1+interact]*scalefac, bins=xEdges, histtype='step', color=col_lgt, lw=2, ls="solid")
                 
         if pid!="16" and alllight==True:
             datas = []
-            for gen in ["S","D","Q","E"]:
+            for gen in ["E","S","Q"]: #"D"
                 data = self.nulight[experimentL+"_"+pid+"_"+gen]
                 energies,entries = data[0], data[1+interact]
                 datas.append(entries)
             datas = np.array(datas)
-            data = np.array([[np.mean(xxx), min(xxx), max(xxx)] for xxx in datas.T])
-            ax.hist(energies, weights=data.T[2], bins=xEdges, histtype='bar', color='gainsboro', lw=1)
-            ax.hist(energies, weights=data.T[1], bins=xEdges, histtype='bar', color='white', lw=1)
-            ax.hist(energies, weights=data.T[0], bins=xEdges, histtype='step', color=col_lgt, lw=2)
+            #data = np.array([[np.mean(xxx), min(xxx), max(xxx)] for xxx in datas.T])
+            data = np.array([[xxx[0], min(xxx), max(xxx)] for xxx in datas.T])
+            ax.hist(energies, weights=data.T[2]*scalefac, bins=xEdges, histtype='bar', color='gainsboro', lw=1, zorder=0)
+            ax.hist(energies, weights=data.T[1]*scalefac, bins=xEdges, histtype='bar', color='white', lw=1, zorder=1)
+            ax.hist(energies, weights=data.T[0]*scalefac, bins=xEdges, histtype='step', color=col_lgt, lw=2, zorder=2)
             
         if False:
             for gen in ["S"]:
                 data = self.nulight[experimentL+"_"+pid+"_"+gen]
-                ax.hist(data[0], weights=data[1+interact], bins=xEdges, histtype='step', color='red', lw=2, ls="solid")
+                ax.hist(data[0], weights=data[1+interact]*scalefac, bins=xEdges, histtype='step', color='red', lw=2, ls="solid")
                 print(experimentL+"_"+pid+"_"+gen, data[1+interact])
                 
                 
@@ -1931,6 +1984,7 @@ class Plotting():
         if pid=="12" and experiment=="FLARE" and interact==True: ax.text(60, 1e3, "$\pi K \Lambda$", color=col_lgt, ha="left")
         
         # add simulation
+        predictions = {}
         for sample, label, col, ls, lw in models:
             energies, entriesP = readfile("files/"+sample+"/"+sample+"_"+experiment+"_" +str(pid)+".txt").T
             energies, entriesM = readfile("files/"+sample+"/"+sample+"_"+experiment+"_-"+str(pid)+".txt").T
@@ -1938,8 +1992,17 @@ class Plotting():
             if interact: entriesM = [w*self.prob_int(en,experiment, "-"+pid) for en,w in zip(energies,entriesM)]
             weights = np.array([w1+w2 for w1,w2 in zip(entriesP, entriesM)])
             if interact: weights *= lumi
-            ax.hist(energies, weights=weights, bins=xEdges, histtype='step', color=col, ls=ls)
-            ax.plot([-1,-1], [0,0], label=label, color=col, ls=ls)
+            if ls in ['min','max']:
+                dat,_=np.histogram(energies, weights=weights, bins=xEdges)
+                predictions[ls] = dat
+            else:
+                if len(predictions.keys()) > 0:
+                    ax.fill_between(xEdges[:-1], predictions['min']*scalefac, predictions['max']*scalefac, step='post', color=col, alpha=0.25, zorder=10)
+                    print (label, (sum(predictions['min']) - sum(weights))*scalefac, (sum(predictions['max']) - sum(weights))*scalefac)
+                    predictions={}
+                ax.hist(energies, weights=weights*scalefac, bins=xEdges, histtype='step', color=col, ls=ls, lw=lw)
+                ax.plot([-1,-1], [0,0], label=label, color=col, ls=ls, lw=lw)
+                print (label, sum(weights)*scalefac)
         
         # finish plot
         xlims = [50.7859, 6393.5]
@@ -1951,8 +2014,8 @@ class Plotting():
         ax.set_xlabel(r"Neutrino Energy [GeV]")
         if interact: ax.set_ylabel(r"Interacting Neutrinos [1/bin]")
         else: ax.set_ylabel(r"Neutrinos [pb/bin]")
-        ax.set_title(experiment+" 13 TeV: " +pidstr)
-        if interact: ax.legend(frameon=False,labelspacing=0, loc="upper left")
+        #ax.set_title(experiment+" 13 TeV: " +pidstr)
+        if interact: ax.legend(frameon=False, labelspacing=0, loc="upper left", fontsize=12)
         elif len(models)>10: ax.legend(frameon=False,labelspacing=0, loc="upper left", bbox_to_anchor=(1.1, 1))
-        else: ax.legend(frameon=False,labelspacing=0, loc="lower left")
+        else: ax.legend(frameon=False,labelspacing=0, loc="lower left", fontsize=14)
    
